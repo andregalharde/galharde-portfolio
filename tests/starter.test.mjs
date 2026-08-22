@@ -2,6 +2,7 @@ import assert from "node:assert/strict"
 import { after, before, test } from "node:test"
 import { spawn } from "node:child_process"
 import { once } from "node:events"
+import { readFile } from "node:fs/promises"
 import path from "node:path"
 
 const hostname = "127.0.0.1"
@@ -80,4 +81,26 @@ test("publishes the project grid and generated project routes", async () => {
   assert.match(homeHtml, /Fluentify/)
   assert.match(fluentifyHtml, /Moodboard/)
   assert.match(fluentifyHtml, /alt="Moodboard 1"/)
+})
+
+test("publishes the profile and portfolio shell", async () => {
+  const [home, about] = await Promise.all([fetch(baseUrl), fetch(`${baseUrl}/sobre`)])
+  const [homeHtml, aboutHtml, css] = await Promise.all([
+    home.text(),
+    about.text(),
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+  ])
+
+  assert.equal(about.status, 200)
+  assert.match(aboutHtml, /Experi.ncia Profissional/)
+  assert.match(aboutHtml, /Educa..o/)
+  assert.match(homeHtml, /href="\/documentos\/curriculo-galharde-designer\.pdf"/)
+  assert.match(homeHtml, /target="_blank"/)
+  assert.match(homeHtml, /Projetos/)
+  assert.match(homeHtml, /Sobre/)
+  assert.match(homeHtml, /Behance/)
+  assert.match(homeHtml, /LinkedIn/)
+  assert.match(homeHtml, /mailto:galharde\.design@gmail\.com/)
+  assert.doesNotMatch(homeHtml, /Starter|Preview/)
+  assert.doesNotMatch(css, /text-transform\s*:\s*uppercase/i)
 })
