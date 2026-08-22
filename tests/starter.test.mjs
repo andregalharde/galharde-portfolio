@@ -69,7 +69,13 @@ test("publishes the project grid and generated project routes", async () => {
   ]
   const responses = await Promise.all(paths.map((route) => fetch(`${baseUrl}${route}`)))
   const [home, fluentify, casaNova, uiBoostApp, uiBoostLanding, missing] = responses
-  const [homeHtml, fluentifyHtml] = await Promise.all([home.text(), fluentify.text()])
+  const [homeHtml, fluentifyHtml, casaNovaHtml, uiBoostAppHtml, uiBoostLandingHtml] = await Promise.all([
+    home.text(),
+    fluentify.text(),
+    casaNova.text(),
+    uiBoostApp.text(),
+    uiBoostLanding.text(),
+  ])
 
   assert.equal(home.status, 200)
   assert.equal(fluentify.status, 200)
@@ -77,10 +83,70 @@ test("publishes the project grid and generated project routes", async () => {
   assert.equal(uiBoostApp.status, 200)
   assert.equal(uiBoostLanding.status, 200)
   assert.equal(missing.status, 404)
-  assert.match(homeHtml, /<a[^>]*href="\/projetos\/fluentify"[^>]*>/)
+  const projectHrefs = [...homeHtml.matchAll(/<a[^>]*href="(\/projetos\/[^"]+)"[^>]*>/g)]
+    .map((match) => match[1])
+    .sort()
+  assert.deepEqual(projectHrefs, [
+    "/projetos/casa-nova",
+    "/projetos/fluentify",
+    "/projetos/ui-boost-app",
+    "/projetos/ui-boost-landing-page",
+  ])
   assert.match(homeHtml, /Fluentify/)
   assert.match(fluentifyHtml, /Moodboard/)
   assert.match(fluentifyHtml, /alt="Moodboard 1"/)
+  for (const value of ["Black", "#000000", "Neutral-700", "#2F3037", "12", "32px", "72px", "Barlow Bold", "Inter Medium"]) {
+    assert.ok(fluentifyHtml.includes(value), `Fluentify must render ${value}`)
+  }
+  assert.match(casaNovaHtml, /alt="Grid Desktop"/)
+  for (const value of ["12", "72px", "32px", "Barlow Regular", "Inter Regular"]) {
+    assert.ok(casaNovaHtml.includes(value), `Casa Nova must render ${value}`)
+  }
+  const colorUsage =
+    "A cor Primary: usada nas interações, botão de CTA, a cor Secondary: usada em assets visuais e a cor Neutral: usada nos títulos em fundos claros e escuros."
+  for (const [label, html, primaryColors] of [
+    ["UI Boost APP", uiBoostAppHtml, ["#EE56BB", "#F974CC", "#FF9FDE"]],
+    ["UI Boost Landing Page", uiBoostLandingHtml, ["#E7564D", "#FE5F55", "#FFCDCA"]],
+  ]) {
+    assert.ok(html.includes(colorUsage), `${label} must render its source color-usage paragraph`)
+    for (const value of [
+      ...primaryColors,
+      "Secondary",
+      "#6818D1",
+      "#721AE6",
+      "#D3B8F7",
+      "Neutral",
+      "#313131",
+      "#626262",
+      "#939393",
+      "Negative",
+      "#DE3961",
+      "#F64F77",
+      "#FC6F91",
+      "Warning",
+      "#F49F1F",
+      "#F8AE3F",
+      "#FFD569",
+      "Informational",
+      "#5A67DF",
+      "#7683F6",
+      "#9CA5FB",
+      "Successful",
+      "#26CECE",
+      "#44E4E4",
+      "#4FF6F6",
+      "4",
+      "20px",
+      "16px",
+      "Poppins Bold",
+      "Poppins Regular",
+      "Inter Bold",
+      "Inter Medium",
+      "Inter Regular",
+    ]) {
+      assert.ok(html.includes(value), `${label} must render ${value}`)
+    }
+  }
 })
 
 test("publishes the profile and portfolio shell", async () => {
@@ -94,13 +160,22 @@ test("publishes the profile and portfolio shell", async () => {
   assert.equal(about.status, 200)
   assert.match(aboutHtml, /Experi.ncia Profissional/)
   assert.match(aboutHtml, /Educa..o/)
-  assert.match(homeHtml, /href="\/documentos\/curriculo-galharde-designer\.pdf"/)
-  assert.match(homeHtml, /target="_blank"/)
+  assert.ok(
+    homeHtml.includes(
+      "Olá! Sou André Galharde, um designer visual e digital que conecta pessoas através de interfaces.",
+    ),
+  )
+  assert.match(
+    homeHtml,
+    /<a(?=[^>]*href="\/documentos\/curriculo-galharde-designer\.pdf")(?=[^>]*target="_blank")[^>]*>/,
+  )
   assert.match(homeHtml, /Projetos/)
   assert.match(homeHtml, /Sobre/)
   assert.match(homeHtml, /Behance/)
   assert.match(homeHtml, /LinkedIn/)
   assert.match(homeHtml, /mailto:galharde\.design@gmail\.com/)
   assert.doesNotMatch(homeHtml, /Starter|Preview/)
+  assert.doesNotMatch(homeHtml, /https:\/\/example\.com/)
+  assert.doesNotMatch(homeHtml, /<meta[^>]*property="og:url"/)
   assert.doesNotMatch(css, /text-transform\s*:\s*uppercase/i)
 })

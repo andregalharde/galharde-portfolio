@@ -6,6 +6,24 @@ export type ProjectGallery = {
   }>
 }
 
+export type ProjectStyleGuide = {
+  palettes: Array<{
+    label: string
+    colors: Array<{
+      label: string
+      hex: string
+    }>
+  }>
+  grid: Array<{
+    label: string
+    value: string
+  }>
+  typography: Array<{
+    label: string
+    styles: string[]
+  }>
+}
+
 export type Project = {
   slug: string
   title: string
@@ -21,6 +39,7 @@ export type Project = {
       src: string
       alt: string
     }
+    styleGuide?: ProjectStyleGuide
   }>
   galleries: ProjectGallery[]
   prototype?: {
@@ -60,6 +79,91 @@ const mobileGalleries: ProjectGallery[] = [
   { title: "Design", images: designs },
 ]
 
+const desktopPalettes: ProjectStyleGuide["palettes"] = [
+  { label: "Primary", colors: [{ label: "Black", hex: "#000000" }] },
+  {
+    label: "Neutral",
+    colors: [
+      { label: "Neutral-700", hex: "#2F3037" },
+      { label: "Neutral-600", hex: "#545662" },
+      { label: "Neutral-300", hex: "#CFD2DF" },
+    ],
+  },
+]
+
+const desktopTypography: ProjectStyleGuide["typography"] = [
+  { label: "Headline", styles: ["Barlow Bold", "Barlow Regular"] },
+  { label: "Body", styles: ["Inter Bold", "Inter Medium", "Inter Regular"] },
+]
+
+const uiBoostTypography: ProjectStyleGuide["typography"] = [
+  { label: "Headline", styles: ["Poppins Bold", "Poppins Regular"] },
+  { label: "Body", styles: ["Inter Bold", "Inter Medium", "Inter Regular"] },
+]
+
+const uiBoostGrid: ProjectStyleGuide["grid"] = [
+  { label: "Colunas", value: "4" },
+  { label: "Margem", value: "20px" },
+  { label: "Gutter", value: "16px" },
+]
+
+function uiBoostPalettes(
+  primary: ProjectStyleGuide["palettes"][number]["colors"],
+  neutralLabels: [string, string, string],
+): ProjectStyleGuide["palettes"] {
+  return [
+    { label: "Primary", colors: primary },
+    {
+      label: "Secondary",
+      colors: [
+        { label: "Dark", hex: "#6818D1" },
+        { label: "Default", hex: "#721AE6" },
+        { label: "Light", hex: "#D3B8F7" },
+      ],
+    },
+    {
+      label: "Neutral",
+      colors: [
+        { label: neutralLabels[0], hex: "#313131" },
+        { label: neutralLabels[1], hex: "#626262" },
+        { label: neutralLabels[2], hex: "#939393" },
+      ],
+    },
+    {
+      label: "Negative",
+      colors: [
+        { label: "Dark", hex: "#DE3961" },
+        { label: "Default", hex: "#F64F77" },
+        { label: "Light", hex: "#FC6F91" },
+      ],
+    },
+    {
+      label: "Warning",
+      colors: [
+        { label: "Dark", hex: "#F49F1F" },
+        { label: "Default", hex: "#F8AE3F" },
+        { label: "Default", hex: "#FFD569" },
+      ],
+    },
+    {
+      label: "Informational",
+      colors: [
+        { label: "Dark", hex: "#5A67DF" },
+        { label: "Dark", hex: "#7683F6" },
+        { label: "Light", hex: "#9CA5FB" },
+      ],
+    },
+    {
+      label: "Successful",
+      colors: [
+        { label: "Dark", hex: "#26CECE" },
+        { label: "Default", hex: "#44E4E4" },
+        { label: "Light", hex: "#4FF6F6" },
+      ],
+    },
+  ]
+}
+
 export const projects: Project[] = [
   {
     slug: "fluentify",
@@ -91,6 +195,15 @@ export const projects: Project[] = [
           "Foi usada as fontes Barlow para Headline (títulos e interações) e a fonte Inter para o body (corpo, tags, hats e outros textos menores).",
         ],
         image: { src: "/media/projects/img-grid-12-col.png", alt: "Grid Mobile" },
+        styleGuide: {
+          palettes: desktopPalettes,
+          grid: [
+            { label: "Colunas", value: "12" },
+            { label: "Margem", value: "32px" },
+            { label: "Gutter", value: "72px" },
+          ],
+          typography: desktopTypography,
+        },
       },
       {
         title: "O Aprendizado",
@@ -132,7 +245,16 @@ export const projects: Project[] = [
           "A cor Primary: usada nas interações, botão de CTA, a cor Secondary: usada em assets visuais e a cor Neutral: usada nos títulos em fundos claros e escuros.",
           "Foi usada as fontes Barlow para Headline (títulos e interações) e a fonte Inter para o body (corpo, tags, hats e outros textos menores).",
         ],
-        image: { src: "/media/projects/img-grid-12-col.png", alt: "Grid Mobile" },
+        image: { src: "/media/projects/img-grid-12-col.png", alt: "Grid Desktop" },
+        styleGuide: {
+          palettes: desktopPalettes,
+          grid: [
+            { label: "Colunas", value: "12" },
+            { label: "Margem", value: "72px" },
+            { label: "Gutter", value: "32px" },
+          ],
+          typography: desktopTypography,
+        },
       },
       {
         title: "O Aprendizado",
@@ -177,11 +299,24 @@ export const projects: Project[] = [
       {
         title: "Style Guide",
         paragraphs: [
+          "A cor Primary: usada nas interações, botão de CTA, a cor Secondary: usada em assets visuais e a cor Neutral: usada nos títulos em fundos claros e escuros.",
           "Por padrão o grid usado foi o de 8px (podendo ter uma variação de 4px) com margens laterais de 20px, grade de 4 colunas, gutter de 16px.",
           "O espaço seguro deixado para a barra de status bar é de 44px e da home navigator é de 34px.",
           "Foi usada as fontes Poppins para Headline (títulos e interações) e a fonte Inter para o body (corpo, tags, hats e outros textos menores).",
         ],
         image: { src: "/media/projects/img-grid.png", alt: "Grid" },
+        styleGuide: {
+          palettes: uiBoostPalettes(
+            [
+              { label: "Dark", hex: "#EE56BB" },
+              { label: "Default", hex: "#F974CC" },
+              { label: "Light", hex: "#FF9FDE" },
+            ],
+            ["700", "500", "100"],
+          ),
+          grid: uiBoostGrid,
+          typography: uiBoostTypography,
+        },
       },
       {
         title: "O Aprendizado",
@@ -230,11 +365,24 @@ export const projects: Project[] = [
       {
         title: "Style Guide",
         paragraphs: [
+          "A cor Primary: usada nas interações, botão de CTA, a cor Secondary: usada em assets visuais e a cor Neutral: usada nos títulos em fundos claros e escuros.",
           "Por padrão o grid usado foi o de 8px (podendo ter uma variação de 4px) com margens laterais de 20px, grade de 4 colunas, gutter de 16px.",
           "O espaço seguro deixado para a barra de status bar é de 44px e da home navigator é de 34px.",
           "Foi usada as fontes Poppins para Headline (títulos e interações) e a fonte Inter para o body (corpo, tags, hats e outros textos menores).",
         ],
         image: { src: "/media/projects/img-grid.png", alt: "Grid" },
+        styleGuide: {
+          palettes: uiBoostPalettes(
+            [
+              { label: "Dark", hex: "#E7564D" },
+              { label: "Default", hex: "#FE5F55" },
+              { label: "Light", hex: "#FFCDCA" },
+            ],
+            ["Neutral-700", "Neutral-500", "Neutral-100"],
+          ),
+          grid: uiBoostGrid,
+          typography: uiBoostTypography,
+        },
       },
       {
         title: "O Aprendizado",
