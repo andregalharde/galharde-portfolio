@@ -103,6 +103,10 @@
   --space-12: 3rem;
   --space-16: 4rem;
   --space-24: 6rem;
+  --space-component-xs: var(--space-2);
+  --space-component: var(--space-4);
+  --space-component-lg: var(--space-6);
+  --space-layout: var(--space-12);
   --container-max: 75rem;
   --container-gutter: clamp(1.25rem, 5vw, 3rem);
   --content-readable: 42rem;
