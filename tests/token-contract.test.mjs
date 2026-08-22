@@ -15,6 +15,7 @@ test("defines every semantic token category consumed by the starter", async () =
     "--radius-control",
     "--shadow-card",
     "--space-layout",
+    "--space-layout-lg",
     "--space-component-lg",
     "--space-component",
     "--space-component-xs",
