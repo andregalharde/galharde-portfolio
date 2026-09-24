@@ -17,18 +17,28 @@ export function HomeScrollIndicator() {
     const update = () => {
       frame = 0
       const threshold = window.innerHeight * 0.65
-      const active = headings.filter((heading) => heading.getBoundingClientRect().top <= threshold).at(-1)
+      const reached = headings.filter((heading) => heading.getBoundingClientRect().top <= threshold)
+      const active = reached.at(-1)
+
+      reached.forEach((heading) => {
+        const section = heading.closest<HTMLElement>("section[data-scroll-stop]")
+        if (section) {
+          section.dataset.colorRevealed = "true"
+        }
+      })
 
       if (!active) {
-        dot.style.opacity = "0"
+        dot.dataset.atTarget = "false"
+        dot.dataset.visible = "false"
         return
       }
 
       const headingRect = active.getBoundingClientRect()
       dot.style.top = `${headingRect.top - rail.getBoundingClientRect().top + headingRect.height / 2}px`
-      dot.style.opacity = "1"
+      dot.dataset.atTarget = "true"
     }
     const scheduleUpdate = () => {
+      dot.dataset.visible = "true"
       if (!frame) frame = window.requestAnimationFrame(update)
     }
 

@@ -7,17 +7,14 @@ import { useEffect, useState } from "react"
 
 import { siteConfig } from "@/lib/site-config"
 
-const pageNavigation = [
-  { href: "/", label: "Projetos" },
-  { href: "/sobre", label: "Sobre" },
-] as const
-
 function Header() {
   const pathname = usePathname()
   const isHome = pathname === "/"
-  const navigation = isHome
-    ? [{ href: "#projetos", label: "Projetos" }, { href: "#sobre", label: "Sobre" }, { href: "#contato", label: "Contato" }]
-    : pageNavigation
+  const navigation = [
+    { href: isHome ? "#projetos" : "/#projetos", label: "Projetos" },
+    { href: isHome ? "#sobre" : "/#sobre", label: "Sobre" },
+    { href: isHome ? "#contato" : "/#contato", label: "Contato" },
+  ]
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -33,7 +30,7 @@ function Header() {
   const scrollState = isScrolled ? "scrolled" : "top"
 
   return (
-    <header className="site-header" data-scroll-state={scrollState} data-home={isHome || undefined}>
+    <header className="site-header" data-scroll-state={scrollState}>
       <div className="site-header__frame">
         <Link href="/" aria-label="Galharde — início" className="site-header__logo-link">
           <Image
@@ -81,8 +78,9 @@ function Header() {
             <span aria-hidden="true" />
           </button>
 
-          <a href={isHome ? "#contato" : siteConfig.emailHref} className="site-header__cta" onClick={() => setIsMenuOpen(false)}>
-            {isHome ? <><span className="site-header__cta-label">Vamos conversar</span><span className="site-header__cta-label-short">Contato</span></> : <span>Contato</span>}
+          <a href={isHome ? "#contato" : "/#contato"} className="site-header__cta" onClick={() => setIsMenuOpen(false)}>
+            <span className="site-header__cta-label">Vamos conversar</span>
+            <span className="site-header__cta-label-short">Contato</span>
             <span className="site-header__cta-arrow" aria-hidden="true">
               <Image
                 src="/brand/cta-arrow-white.svg"

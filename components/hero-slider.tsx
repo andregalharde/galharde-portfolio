@@ -150,7 +150,7 @@ export function HeroSlider({ slides }: HeroSliderProps) {
               </div>
 
               <div className="hero-slider__meta">
-                <div className="hero-slider__case-info">
+                <div key={activeSlide.slug} className="hero-slider__case-info">
                   <span className="hero-slider__year">{activeSlide.year}</span>
                   <span className="hero-slider__divider" aria-hidden="true" />
                   <span className="hero-slider__title">{activeSlide.title}</span>

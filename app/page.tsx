@@ -21,12 +21,9 @@ export default function HomePage() {
         <HomeScrollIndicator />
         <section className={styles.hero} aria-labelledby="home-title" data-home-hero>
           <div className={styles.heroCopy} data-hero-reveal="copy">
-            <p className={styles.eyebrow}>UI/UX DESIGNER</p>
+            <p className={styles.eyebrow} data-home-rail-target>UI/UX DESIGNER</p>
             <h1 id="home-title">Pessoas,<br />ideias e<br />resultados<span className="home-accent">.</span></h1>
             <p className={styles.introduction}>Sou André Galharde, designer especializado em transformar desafios complexos em interfaces claras, úteis e fáceis de usar.</p>
-            <Button variant="outline" className={styles.heroSecondaryCta} asChild>
-              <a href="#projetos">Conheça meu trabalho<span className="portfolio-cta__arrow" aria-hidden="true" /></a>
-            </Button>
           </div>
           <div className={styles.composition} aria-label="Fotografias pessoais de André Galharde">
             <figure className={styles.portrait} data-hero-image="portrait">
@@ -47,6 +44,8 @@ export default function HomePage() {
           </div>
         </section>
 
+        <ClientLogos />
+
         <section id="projetos" className={styles.projects} aria-labelledby="projects-heading" data-scroll-stop>
           <header className={styles.sectionHeader}>
             <p className={styles.eyebrow} data-home-rail-target>PROJETOS</p>
@@ -57,14 +56,13 @@ export default function HomePage() {
           </div>
         </section>
 
-        <ClientLogos />
         <AboutTrajectory home />
 
         <section id="contato" className={styles.contact} aria-labelledby="contact-heading" data-scroll-stop>
           <div>
             <p className={styles.eyebrow} data-home-rail-target>CONTATO</p>
-            <h2 id="contact-heading">Vamos<br />conversar<span className="home-accent">?</span></h2>
-            <p className={styles.contactCopy}>Ideias fortes começam com uma boa conversa.</p>
+            <h2 id="contact-heading">Vamos<br />conversar?</h2>
+            <p className={styles.contactCopy}>Ideias fortes começam com uma<br />boa conversa.</p>
             <Button variant="brand" asChild>
               <a href={siteConfig.emailHref}>Enviar uma mensagem<span className="portfolio-cta__arrow" aria-hidden="true" /></a>
             </Button>
@@ -72,7 +70,7 @@ export default function HomePage() {
           <div className={styles.contactDetails}>
             <a href={siteConfig.emailHref} className={styles.email}>
               <span>ESTOU POR AQUI</span>
-              <span><span className={styles.emailAddress}>{emailLocal}<wbr />@{emailDomain}</span><Image src="/brand/cta-arrow-grafite.svg" alt="" width={16} height={16} unoptimized /></span>
+              <span><span className={styles.emailAddress}>{emailLocal}<wbr />@{emailDomain}</span></span>
             </a>
             <nav className={styles.socials} aria-label="Redes sociais">
               <a href={siteConfig.linkedinUrl} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Image src="/brand/footer/linkedin.svg" alt="" width={20} height={20} />LinkedIn</a>
