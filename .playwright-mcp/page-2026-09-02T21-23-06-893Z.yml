@@ -1,0 +1,75 @@
+- generic [active] [ref=f2e1]:
+  - link "Ir para o conteúdo" [ref=f2e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner:
+    - generic [ref=f2e3]:
+      - link "Galharde — início" [ref=f2e4] [cursor=pointer]:
+        - /url: /
+        - img "Galharde" [ref=f2e5]
+      - generic [ref=f2e12]:
+        - button "Abrir menu" [ref=f2e142] [cursor=pointer]
+        - link "Contato" [ref=f2e13] [cursor=pointer]:
+          - /url: mailto:galharde.design@gmail.com
+  - main [ref=f2e16]:
+    - article [ref=f2e145]:
+      - region "Digitart" [ref=f2e146]:
+        - generic [ref=f2e147]:
+          - generic [ref=f2e148]:
+            - paragraph [ref=f2e149]: Identidade visual · 2026
+            - img "Digitart" [ref=f2e150]
+          - figure [ref=f2e151]:
+            - img "Identidade visual Digitart com padrão direcional azul" [ref=f2e152]
+      - region [ref=f2e153]:
+        - generic [ref=f2e154]:
+          - generic [ref=f2e155]:
+            - paragraph [ref=f2e156]: Sobre o projeto
+            - heading "Digitart" [level=1] [ref=f2e157]
+            - heading "Uma identidade criada para avançar no digital." [level=2] [ref=f2e158]
+          - generic [ref=f2e159]:
+            - paragraph [ref=f2e160]: A Digitart é uma agência especializada na criação de sites. Sua identidade visual une precisão tecnológica e energia criativa, traduzidas por uma linguagem direta, dinâmica e preparada para o ambiente digital.
+            - generic "Paleta de cores da Digitart" [ref=f2e161]:
+              - paragraph [ref=f2e162]: Cores da marca
+              - list [ref=f2e163]:
+                - listitem [ref=f2e164]:
+                  - generic [ref=f2e166]: Azul digital
+                  - generic [ref=f2e167]: "#1741CA"
+                - listitem [ref=f2e168]:
+                  - generic [ref=f2e170]: Amarelo
+                  - generic [ref=f2e171]: "#DEB019"
+                - listitem [ref=f2e172]:
+                  - generic [ref=f2e174]: Azul profundo
+                  - generic [ref=f2e175]: "#0B1E5D"
+                - listitem [ref=f2e176]:
+                  - generic [ref=f2e178]: Azul claro
+                  - generic [ref=f2e179]: "#E8EDFC"
+  - contentinfo [ref=f2e106]:
+    - generic [ref=f2e107]:
+      - generic [ref=f2e108]:
+        - generic [ref=f2e109]:
+          - img "Galharde" [ref=f2e110]
+          - navigation "Redes sociais" [ref=f2e111]:
+            - list [ref=f2e112]:
+              - listitem [ref=f2e113]:
+                - link "Instagram" [ref=f2e114] [cursor=pointer]:
+                  - /url: https://www.instagram.com/andregalharde
+              - listitem [ref=f2e115]:
+                - link "Behance" [ref=f2e116] [cursor=pointer]:
+                  - /url: https://www.behance.net/andregalharde
+                  - text: Bē
+              - listitem [ref=f2e117]:
+                - link "LinkedIn" [ref=f2e118] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/andre-galharde/
+        - generic [ref=f2e119]:
+          - paragraph [ref=f2e120]: Disponível para novos projetos
+          - heading "Ideias fortes começam com uma boa conversa." [level=2] [ref=f2e121]: Ideias fortes começamcom uma boa conversa.
+          - paragraph [ref=f2e122]: Estratégia, identidade e presença para marcas em movimento.
+          - link "Vamos conversar" [ref=f2e123] [cursor=pointer]:
+            - /url: mailto:galharde.design@gmail.com
+      - generic [ref=f2e126]:
+        - paragraph [ref=f2e127]:
+          - strong [ref=f2e128]: © 2026 Galharde.
+          - text: Todos os Direitos Reservados.
+        - link "Voltar ao topo" [ref=f2e129] [cursor=pointer]:
+          - /url: "#top"
+  - button "Open Next.js Dev Tools" [ref=f2e138] [cursor=pointer]
+  - alert [ref=f2e180]: Digitart

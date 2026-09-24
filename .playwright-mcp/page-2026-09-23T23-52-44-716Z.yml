@@ -1,0 +1,167 @@
+- generic [active] [ref=f11e1]:
+  - link "Ir para o conteúdo" [ref=f11e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner:
+    - generic [ref=f11e3]:
+      - link "Galharde — início" [ref=f11e4] [cursor=pointer]:
+        - /url: /
+        - img "Galharde" [ref=f11e5]
+      - navigation "Navegação principal" [ref=f11e6]:
+        - list [ref=f11e7]:
+          - listitem [ref=f11e8]:
+            - link "Projetos" [ref=f11e9] [cursor=pointer]:
+              - /url: "#projetos"
+          - listitem [ref=f11e10]:
+            - link "Sobre" [ref=f11e11] [cursor=pointer]:
+              - /url: "#sobre"
+          - listitem [ref=f11e12]:
+            - link "Contato" [ref=f11e13] [cursor=pointer]:
+              - /url: "#contato"
+      - link "Vamos conversar" [ref=f11e15] [cursor=pointer]:
+        - /url: "#contato"
+  - main [ref=f11e18]:
+    - generic [ref=f11e20]:
+      - region [ref=f11e21]:
+        - generic [ref=f11e22]:
+          - paragraph [ref=f11e23]: UI/UX DESIGNER
+          - heading "Pessoas, ideias e resultados." [level=1] [ref=f11e24]: Pessoas,ideias eresultados.
+          - paragraph [ref=f11e25]: Sou André Galharde, designer especializado em transformar desafios complexos em interfaces claras, úteis e fáceis de usar.
+          - link "Conheça meu trabalho" [ref=f11e26] [cursor=pointer]:
+            - /url: "#projetos"
+        - generic "Fotografias pessoais de André Galharde" [ref=f11e28]:
+          - figure [ref=f11e29]:
+            - img "Retrato de André Galharde" [ref=f11e31]
+          - figure [ref=f11e32]:
+            - img "Castelo histórico em Portugal, do acervo pessoal de André" [ref=f11e34]
+          - figure [ref=f11e35]:
+            - img "Estádio da Luz, em Lisboa, do acervo pessoal de André" [ref=f11e37]
+      - region [ref=f11e38]:
+        - generic [ref=f11e39]:
+          - paragraph [ref=f11e40]: PROJETOS
+          - heading "Projetos em destaque." [level=2] [ref=f11e41]
+        - generic [ref=f11e42]:
+          - link [ref=f11e43] [cursor=pointer]:
+            - /url: /projetos/adote-um-pet
+            - article [ref=f11e44]:
+              - generic [ref=f11e45]:
+                - img "Adote um Pet — Produto digital" [ref=f11e46]
+                - generic [ref=f11e47]: "2026"
+              - generic:
+                - generic:
+                  - heading "Adote um Pet" [level=3]
+                  - paragraph: Produto digital
+          - link [ref=f11e48] [cursor=pointer]:
+            - /url: /projetos/casa-nova
+            - article [ref=f11e49]:
+              - generic [ref=f11e50]:
+                - img "Casa Nova — Site" [ref=f11e51]
+                - generic [ref=f11e52]: "2023"
+              - generic:
+                - generic:
+                  - heading "Casa Nova" [level=3]
+                  - paragraph: Site
+          - link [ref=f11e53] [cursor=pointer]:
+            - /url: /projetos/ui-boost-app
+            - article [ref=f11e54]:
+              - generic [ref=f11e55]:
+                - img "UI Boost — APP" [ref=f11e56]
+                - generic [ref=f11e57]: "2022"
+              - generic:
+                - generic:
+                  - heading "UI Boost" [level=3]
+                  - paragraph: APP
+      - region "Logos" [ref=f11e58]:
+        - list [ref=f11e59]:
+          - listitem [ref=f11e60]:
+            - img "Itaú" [ref=f11e61]
+          - listitem [ref=f11e62]:
+            - img "Eucatex" [ref=f11e63]
+          - listitem [ref=f11e64]:
+            - img "Natura" [ref=f11e65]
+          - listitem [ref=f11e66]:
+            - img "iFood" [ref=f11e67]
+          - listitem [ref=f11e68]:
+            - img "Nubank" [ref=f11e69]
+          - listitem [ref=f11e70]:
+            - img "Petrobras" [ref=f11e71]
+      - region [ref=f11e72]:
+        - generic [ref=f11e73]:
+          - generic [ref=f11e74]:
+            - paragraph [ref=f11e75]: SOBRE MIM
+            - heading "Experiência e formação." [level=2] [ref=f11e76]: Experiênciae formação.
+            - paragraph [ref=f11e77]: "Do atendimento ao cliente ao front-end e ao UX/UI: minha trajetória conecta a compreensão das pessoas à construção de interfaces."
+            - link "Baixar currículo" [ref=f11e78] [cursor=pointer]:
+              - /url: /documentos/curriculo-galharde-designer.pdf
+          - generic [ref=f11e81]:
+            - region [ref=f11e82]:
+              - heading "EXPERIÊNCIA PROFISSIONAL" [level=3] [ref=f11e83]
+              - list [ref=f11e84]:
+                - listitem [ref=f11e85]:
+                  - strong [ref=f11e86]: Innova
+                  - generic [ref=f11e87]: UX/UI Designer
+                  - generic [ref=f11e88]: 2021 - Atual
+                - listitem [ref=f11e89]:
+                  - strong [ref=f11e90]: Themediagroup
+                  - generic [ref=f11e91]: Front-end
+                  - generic [ref=f11e92]: 2017 - 2021
+                - listitem [ref=f11e93]:
+                  - generic [ref=f11e94]: Atendimento ao cliente
+                  - generic [ref=f11e95]: 2005 - 2017
+            - region [ref=f11e96]:
+              - heading "FORMAÇÃO" [level=3] [ref=f11e97]
+              - list [ref=f11e98]:
+                - listitem [ref=f11e99]:
+                  - strong [ref=f11e100]: Design Circuit
+                  - generic [ref=f11e101]: 2026 - Cursando
+                - listitem [ref=f11e102]:
+                  - strong [ref=f11e103]: Design Boost
+                  - generic [ref=f11e104]: 2025 - Concluído
+                - listitem [ref=f11e105]:
+                  - strong [ref=f11e106]: Intuitive Pixel
+                  - generic [ref=f11e107]: 2024 - Concluído
+                - listitem [ref=f11e108]:
+                  - strong [ref=f11e109]: UI Boost
+                  - generic [ref=f11e110]: 2022 - Concluído
+                - listitem [ref=f11e111]:
+                  - strong [ref=f11e112]: Curso de Figma
+                  - generic [ref=f11e113]: 2021 - Concluído
+      - region [ref=f11e114]:
+        - generic [ref=f11e115]:
+          - paragraph [ref=f11e116]: CONTATO
+          - heading "Vamos conversar?" [level=2] [ref=f11e117]: Vamosconversar?
+          - paragraph [ref=f11e118]: Ideias fortes começam com uma boa conversa.
+          - link "Enviar uma mensagem" [ref=f11e119] [cursor=pointer]:
+            - /url: mailto:galharde.design@gmail.com
+        - generic [ref=f11e121]:
+          - link "E-MAIL galharde.design@gmail.com" [ref=f11e122] [cursor=pointer]:
+            - /url: mailto:galharde.design@gmail.com
+            - generic [ref=f11e123]: E-MAIL
+            - generic [ref=f11e124]: galharde.design@gmail.com
+          - navigation "Redes sociais" [ref=f11e125]:
+            - link "Instagram" [ref=f11e126] [cursor=pointer]:
+              - /url: https://www.instagram.com/andregalharde
+              - text: Instagram ↗
+            - link "Behance" [ref=f11e127] [cursor=pointer]:
+              - /url: https://www.behance.net/andregalharde
+              - text: Behance ↗
+            - link "LinkedIn" [ref=f11e128] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/andre-galharde/
+              - text: LinkedIn ↗
+  - contentinfo [ref=f11e129]:
+    - generic [ref=f11e130]:
+      - generic [ref=f11e131]:
+        - link "Galharde — início" [ref=f11e132] [cursor=pointer]:
+          - /url: "#top"
+          - img "Galharde" [ref=f11e133]
+        - navigation "Navegação do rodapé" [ref=f11e134]:
+          - link "Projetos" [ref=f11e135] [cursor=pointer]:
+            - /url: "#projetos"
+          - link "Sobre" [ref=f11e136] [cursor=pointer]:
+            - /url: "#sobre"
+          - link "Contato" [ref=f11e137] [cursor=pointer]:
+            - /url: "#contato"
+      - generic [ref=f11e138]:
+        - paragraph [ref=f11e139]: © 2026 Galharde. Todos os Direitos Reservados.
+        - link "Voltar ao topo" [ref=f11e140] [cursor=pointer]:
+          - /url: "#top"
+  - button "Open Next.js Dev Tools" [ref=f11e149] [cursor=pointer]

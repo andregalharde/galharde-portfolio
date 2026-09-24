@@ -3,6 +3,7 @@ import Image from "next/image"
 import { notFound } from "next/navigation"
 
 import { ProjectGallery } from "@/components/project-gallery"
+import { CaseStudyTemplate } from "@/components/case-study-template"
 import { Section } from "@/components/sections/section"
 import { Button } from "@/components/ui/button"
 import { getProjectBySlug, projects } from "@/lib/projects"
@@ -16,7 +17,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
   const { slug } = await params
   const project = getProjectBySlug(slug)
-  return project ? { title: `${project.title} — ${project.type}` } : {}
+  return project ? { title: `${project.caseStudy?.title ?? project.title} — ${project.type}` } : {}
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
@@ -25,18 +26,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   if (!project) notFound()
 
+  if (project.caseStudy) return <CaseStudyTemplate caseStudy={project.caseStudy} />
+
   return (
-    <article>
-      <Section containerClassName="grid gap-layout">
+    <article className="case-page">
+      <Section className="case-masthead" containerClassName="grid gap-layout">
         <div className="grid gap-component">
           <p className="text-small font-semibold text-muted-foreground">{project.type} · {project.year}</p>
           <h1 className="text-display font-semibold">{project.title}</h1>
         </div>
-        <figure className="relative aspect-[16/9] overflow-hidden rounded-ui-card bg-muted">
+        <figure className="project-canvas relative aspect-[16/9] overflow-hidden rounded-ui-card" data-tone={project.tone}>
           <Image src={project.heroImage} alt={`${project.title} — ${project.type}`} fill sizes="(min-width: 1200px) 1200px, 100vw" className="object-cover" priority />
         </figure>
       </Section>
-      <Section containerClassName="grid max-w-[var(--content-readable)] gap-layout">
+      <Section className="case-editorial" containerClassName="grid max-w-[var(--content-readable)] gap-layout">
         {project.sections.map((section) => (
           <section key={section.title} className="grid gap-component">
             <h2 className="text-heading font-semibold">{section.title}</h2>
@@ -70,7 +73,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             {section.image ? <figure className="relative aspect-[16/9] overflow-hidden rounded-ui-card bg-muted"><Image src={section.image.src} alt={section.image.alt} fill sizes="(min-width: 768px) 672px, 100vw" className="object-contain" /></figure> : null}
           </section>
         ))}
-        {project.prototype ? <div className="grid gap-component"><figure className="relative aspect-[16/9] overflow-hidden rounded-ui-card bg-muted"><Image src={project.prototype.image.src} alt={project.prototype.image.alt} fill sizes="(min-width: 768px) 672px, 100vw" className="object-contain" /></figure><div><Button asChild><a href={project.prototype.url} target="_blank" rel="noreferrer">{project.prototype.label}</a></Button></div></div> : null}
+        {project.prototype ? <div className="grid gap-component"><figure className="relative aspect-[16/9] overflow-hidden rounded-ui-card bg-muted"><Image src={project.prototype.image.src} alt={project.prototype.image.alt} fill sizes="(min-width: 768px) 672px, 100vw" className="object-contain" /></figure><div><Button variant="brand" asChild><a href={project.prototype.url} target="_blank" rel="noreferrer">{project.prototype.label}<span className="portfolio-cta__arrow" aria-hidden="true" /></a></Button></div></div> : null}
       </Section>
       <Section containerClassName="grid gap-layout">
         {project.galleries.map((gallery, index) => <ProjectGallery key={gallery.title} gallery={gallery} projectTitle={project.title} index={index} />)}

@@ -1,0 +1,128 @@
+- generic [active] [ref=f1e1]:
+  - link "Ir para o conteúdo" [ref=f1e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner:
+    - generic [ref=f1e3]:
+      - link "Galharde — início" [ref=f1e4] [cursor=pointer]:
+        - /url: /
+        - img "Galharde" [ref=f1e5]
+      - navigation "Navegação principal" [ref=f1e6]:
+        - list [ref=f1e7]:
+          - listitem [ref=f1e8]:
+            - link "Projetos" [ref=f1e9] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f1e10]:
+            - link "Sobre" [ref=f1e11] [cursor=pointer]:
+              - /url: /sobre
+      - link "Contato" [ref=f1e13] [cursor=pointer]:
+        - /url: mailto:galharde.design@gmail.com
+  - main [ref=f1e16]:
+    - generic [ref=f1e17]:
+      - region "Cases em destaque" [ref=f1e18]:
+        - heading "Cases em destaque" [level=1] [ref=f1e19]
+        - generic [ref=f1e20]:
+          - tablist "Selecionar case em destaque" [ref=f1e21]:
+            - tab "Mostrar case Adote um Pet" [selected] [ref=f1e22] [cursor=pointer]
+            - tab "Mostrar case Digitart" [ref=f1e24] [cursor=pointer]
+            - tab "Mostrar case Entrelinha" [ref=f1e26] [cursor=pointer]
+          - group "1 de 3" [ref=f1e30]:
+            - link "Acessar case Adote um Pet" [ref=f1e31] [cursor=pointer]:
+              - /url: /projetos/adote-um-pet
+              - img "Banner do case Adote um Pet" [ref=f1e33]
+            - generic [ref=f1e34]:
+              - generic [ref=f1e35]:
+                - generic [ref=f1e36]: "2026"
+                - generic [ref=f1e38]: Adote um Pet
+              - link "Acessar case" [ref=f1e39] [cursor=pointer]:
+                - /url: /projetos/adote-um-pet
+      - region "Marcas selecionadas" [ref=f1e42]:
+        - list [ref=f1e43]:
+          - listitem [ref=f1e44]:
+            - img "Itaú" [ref=f1e45]
+          - listitem [ref=f1e46]:
+            - img "Eucatex" [ref=f1e47]
+          - listitem [ref=f1e48]:
+            - img "Natura" [ref=f1e49]
+          - listitem [ref=f1e50]:
+            - img "iFood" [ref=f1e51]
+          - listitem [ref=f1e52]:
+            - img "Nubank" [ref=f1e53]
+          - listitem [ref=f1e54]:
+            - img "Petrobras" [ref=f1e55]
+      - region [ref=f1e56]:
+        - generic [ref=f1e57]:
+          - generic [ref=f1e58]:
+            - heading "Projetos" [level=2] [ref=f1e59]
+            - paragraph [ref=f1e60]: Quatro projetos em que estratégia, direção e execução se tornam sistemas de marca.
+          - generic [ref=f1e61]:
+            - link [ref=f1e62] [cursor=pointer]:
+              - /url: /projetos/adote-um-pet
+              - article [ref=f1e63]:
+                - generic [ref=f1e64]:
+                  - img "Adote um Pet — Produto digital" [ref=f1e65]
+                  - generic [ref=f1e66]: "2026"
+                - generic [ref=f1e68]:
+                  - heading "Adote um Pet" [level=3] [ref=f1e69]
+                  - paragraph [ref=f1e70]: Produto digital
+                  - paragraph [ref=f1e71]: Uma plataforma mais humana para aproximar pessoas, pets e histórias que merecem continuar.
+            - link [ref=f1e73] [cursor=pointer]:
+              - /url: /projetos/casa-nova
+              - article [ref=f1e74]:
+                - generic [ref=f1e75]:
+                  - img "Casa Nova — Site" [ref=f1e76]
+                  - generic [ref=f1e77]: "2023"
+                - generic [ref=f1e79]:
+                  - heading "Casa Nova" [level=3] [ref=f1e80]
+                  - paragraph [ref=f1e81]: Site
+                  - paragraph [ref=f1e82]: O projeto teve como objetivo repensar a presença digital de uma igreja local, conectando fé, comunidade e tecnologia por meio de uma interface acessível e acolhedora.
+            - link [ref=f1e84] [cursor=pointer]:
+              - /url: /projetos/ui-boost-app
+              - article [ref=f1e85]:
+                - generic [ref=f1e86]:
+                  - img "UI Boost — APP" [ref=f1e87]
+                  - generic [ref=f1e88]: "2022"
+                - generic [ref=f1e90]:
+                  - heading "UI Boost" [level=3] [ref=f1e91]
+                  - paragraph [ref=f1e92]: APP
+                  - paragraph [ref=f1e93]: No mundo atual, onde o aprendizado contínuo e acessível é essencial para o crescimento pessoal e profissional, a demanda por ferramentas de estudo eficazes nunca foi tão alta. Com o avanço da tecnologia, aplicativos de estudo se tornaram um meio popular para estudantes e profissionais se capacitarem, oferecendo uma maneira conveniente de adquirir novos conhecimentos e habilidades.
+            - link [ref=f1e95] [cursor=pointer]:
+              - /url: /projetos/ui-boost-landing-page
+              - article [ref=f1e96]:
+                - generic [ref=f1e97]:
+                  - img "UI Boost — Landing Page" [ref=f1e98]
+                  - generic [ref=f1e99]: "2022"
+                - generic [ref=f1e101]:
+                  - heading "UI Boost" [level=3] [ref=f1e102]
+                  - paragraph [ref=f1e103]: Landing Page
+                  - paragraph [ref=f1e104]: Com o crescimento da procura por formação em design digital, surgiu a oportunidade de criar uma landing page estratégica para divulgar um curso de UI Design voltado a iniciantes e profissionais em transição de carreira.
+  - contentinfo [ref=f1e106]:
+    - generic [ref=f1e107]:
+      - generic [ref=f1e108]:
+        - generic [ref=f1e109]:
+          - img "Galharde" [ref=f1e110]
+          - navigation "Redes sociais" [ref=f1e111]:
+            - list [ref=f1e112]:
+              - listitem [ref=f1e113]:
+                - link "Instagram" [ref=f1e114] [cursor=pointer]:
+                  - /url: https://www.instagram.com/andregalharde
+              - listitem [ref=f1e115]:
+                - link "Behance" [ref=f1e116] [cursor=pointer]:
+                  - /url: https://www.behance.net/andregalharde
+                  - text: Bē
+              - listitem [ref=f1e117]:
+                - link "LinkedIn" [ref=f1e118] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/andre-galharde/
+        - generic [ref=f1e119]:
+          - paragraph [ref=f1e120]: Disponível para novos projetos
+          - heading "Ideias fortes começam com uma boa conversa." [level=2] [ref=f1e121]: Ideias fortes começamcom uma boa conversa.
+          - paragraph [ref=f1e122]: Estratégia, identidade e presença para marcas em movimento.
+          - link "Vamos conversar" [ref=f1e123] [cursor=pointer]:
+            - /url: mailto:galharde.design@gmail.com
+      - generic [ref=f1e126]:
+        - paragraph [ref=f1e127]:
+          - strong [ref=f1e128]: © 2026 Galharde.
+          - text: Todos os Direitos Reservados.
+        - link "Voltar ao topo" [ref=f1e129] [cursor=pointer]:
+          - /url: "#top"
+  - button "Open Next.js Dev Tools" [ref=f1e138] [cursor=pointer]
+  - alert [ref=f1e142]

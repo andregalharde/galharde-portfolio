@@ -9,6 +9,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
+        brand: "bg-[var(--color-ink)] text-[var(--color-ivory)] hover:bg-[var(--color-graphite)]",
         default: "bg-primary text-primary-foreground hover:opacity-90 active:opacity-80",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-muted active:opacity-80",
@@ -46,6 +47,7 @@ function Button({
   return (
     <Comp
       data-slot="button"
+      data-variant={variant}
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
     />

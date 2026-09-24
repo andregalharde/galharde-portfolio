@@ -81,7 +81,7 @@ test("publishes the four source-backed portfolio projects", async () => {
 
   assert.equal(projectModule.projects.length, 4)
   assert.deepEqual(projectModule.projects.map((project) => project.slug), [
-    "fluentify",
+    "adote-um-pet",
     "casa-nova",
     "ui-boost-app",
     "ui-boost-landing-page",
@@ -112,10 +112,10 @@ test("models the exact source home profile independently from project copy", asy
 
 test("models every visible desktop case style-guide fact", async () => {
   const { getProjectBySlug } = await import("../lib/projects.ts")
-  const fluentify = styleGuideFor(getProjectBySlug("fluentify"))
+  const adoteUmPet = styleGuideFor(getProjectBySlug("adote-um-pet"))
   const casaNova = styleGuideFor(getProjectBySlug("casa-nova"))
 
-  assert.deepEqual(fluentify, {
+  assert.deepEqual(adoteUmPet, {
     ...sharedDesktopStyleGuide,
     grid: [
       { label: "Colunas", value: "12" },
@@ -134,6 +134,32 @@ test("models every visible desktop case style-guide fact", async () => {
   assert.equal(
     getProjectBySlug("casa-nova").sections.find((section) => section.title === "Style Guide").image.alt,
     "Grid Desktop",
+  )
+})
+
+test("models Digitart as an intro-only hero destination", async () => {
+  const projectModule = await import("../lib/projects.ts")
+
+  assert.equal(typeof projectModule.getProjectIntroductionBySlug, "function")
+  assert.deepEqual(projectModule.getProjectIntroductionBySlug("digitart"), {
+    slug: "digitart",
+    eyebrow: "Identidade visual · 2026",
+    title: "Digitart",
+    headline: "Uma identidade criada para avançar no digital.",
+    description:
+      "A Digitart é uma agência especializada na criação de sites. Sua identidade visual une precisão tecnológica e energia criativa, traduzidas por uma linguagem direta, dinâmica e preparada para o ambiente digital.",
+    heroImage: "/media/hero/digitart.png",
+    logoImage: "/media/cases/digitart/digitart-wordmark.svg",
+    colors: [
+      { label: "Azul digital", hex: "#1741CA" },
+      { label: "Amarelo", hex: "#DEB019" },
+      { label: "Azul profundo", hex: "#0B1E5D" },
+      { label: "Azul claro", hex: "#E8EDFC" },
+    ],
+  })
+  assert.equal(
+    projectModule.projects.some((project) => project.slug === "digitart"),
+    false,
   )
 })
 

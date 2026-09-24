@@ -1,23 +1,39 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import type { Project } from "@/lib/projects"
 
-type ProjectCardProps = { project: Project }
+type ProjectCardProps = { project: Project; editorial?: boolean }
 
-function ProjectCard({ project }: ProjectCardProps) {
+function ProjectCard({ project, editorial = false }: ProjectCardProps) {
+  const summary = project.caseStudy?.summary
+    ?? project.sections.find((section) => section.paragraphs.length > 0)?.paragraphs[0]
+    ?? "Conheça o processo e as decisões deste projeto."
+
   return (
-    <Link href={`/projetos/${project.slug}`} className="group block">
-      <Card className="h-full gap-component overflow-hidden py-0 transition-transform group-hover:-translate-y-1">
-        <div className="relative aspect-[16/10] overflow-hidden bg-muted">
-          <Image src={project.coverImage} alt={`${project.title} — ${project.type}`} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
+    <Link href={`/projetos/${project.slug}`} data-case-tone={project.tone} data-editorial={editorial || undefined} className="case-card group block">
+      <article className="project-card case-card__surface">
+        <div className="case-card__media">
+          <Image
+            src={project.coverImage}
+            alt={`${project.title} — ${project.type}`}
+            fill
+            sizes={editorial ? "(min-width: 1280px) 368px, (min-width: 1025px) 30vw, (min-width: 761px) 45vw, 90vw" : "(min-width: 1280px) 596px, (min-width: 760px) calc(50vw - 48px), calc(100vw - 48px)"}
+            className="case-card__image"
+          />
+          <span className="project-card__year">{project.year}</span>
         </div>
-        <CardHeader className="pb-component-lg">
-          <CardDescription>{project.type} · {project.year}</CardDescription>
-          <CardTitle>{project.title}</CardTitle>
-        </CardHeader>
-      </Card>
+        <div className="case-card__meta">
+          <div className="case-card__copy">
+            <h3>{project.title}</h3>
+            <p className="project-card__category">{project.type}</p>
+            {!editorial && <p className="project-card__summary">{summary}</p>}
+          </div>
+          <span className="project-card__arrow" aria-hidden="true">
+            <Image src="/brand/project-arrow.svg" alt="" width={24} height={24} />
+          </span>
+        </div>
+      </article>
     </Link>
   )
 }

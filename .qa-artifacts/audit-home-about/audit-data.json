@@ -1,0 +1,875 @@
+{
+  "homeDesktop": {
+    "url": "http://localhost:3001/",
+    "title": "André Galharde",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "document": {
+      "width": 1425,
+      "height": 3393
+    },
+    "horizontalOverflow": false,
+    "headings": [
+      {
+        "level": "h1",
+        "text": "Cases em destaque"
+      },
+      {
+        "level": "h2",
+        "text": "Projetos"
+      },
+      {
+        "level": "h3",
+        "text": "Adote um Pet"
+      },
+      {
+        "level": "h3",
+        "text": "Casa Nova"
+      },
+      {
+        "level": "h3",
+        "text": "UI Boost"
+      },
+      {
+        "level": "h3",
+        "text": "UI Boost"
+      },
+      {
+        "level": "h2",
+        "text": "Ideias fortes começamcom uma boa conversa."
+      }
+    ],
+    "landmarks": {
+      "header": 2,
+      "nav": 3,
+      "main": 1,
+      "footer": 1
+    },
+    "images": {
+      "total": 23,
+      "missingAlt": [],
+      "emptyAlt": 10
+    },
+    "links": [
+      {
+        "label": "Ir para o conteúdo",
+        "href": "#main-content"
+      },
+      {
+        "label": "Galharde — início",
+        "href": "/"
+      },
+      {
+        "label": "Projetos",
+        "href": "/"
+      },
+      {
+        "label": "Sobre",
+        "href": "/sobre"
+      },
+      {
+        "label": "Contato",
+        "href": "mailto:galharde.design@gmail.com"
+      },
+      {
+        "label": "Projetos",
+        "href": "/"
+      },
+      {
+        "label": "Sobre",
+        "href": "/sobre"
+      },
+      {
+        "label": "Currículo",
+        "href": "/documentos/curriculo-galharde-designer.pdf"
+      },
+      {
+        "label": "Acessar case Adote um Pet",
+        "href": "/projetos/adote-um-pet"
+      },
+      {
+        "label": "Acessar case",
+        "href": "/projetos/adote-um-pet"
+      },
+      {
+        "label": "2026Adote um PetProduto digitalUma plataforma mais humana para aproximar pessoas, pets e histórias que merecem continuar.",
+        "href": "/projetos/adote-um-pet"
+      },
+      {
+        "label": "2023Casa NovaSiteO projeto teve como objetivo repensar a presença digital de uma igreja local, conectando fé, comunidade e tecnologia por meio de uma interface acessível e acolhedora.",
+        "href": "/projetos/casa-nova"
+      },
+      {
+        "label": "2022UI BoostAPPNo mundo atual, onde o aprendizado contínuo e acessível é essencial para o crescimento pessoal e profissional, a demanda por ferramentas de estudo eficazes nunca foi tão alta. Com o avanço da tecnologia, aplicativos de estudo se tornaram um meio popular para estudantes e profissionais se capacitarem, oferecendo uma maneira conveniente de adquirir novos conhecimentos e habilidades.",
+        "href": "/projetos/ui-boost-app"
+      },
+      {
+        "label": "2022UI BoostLanding PageCom o crescimento da procura por formação em design digital, surgiu a oportunidade de criar uma landing page estratégica para divulgar um curso de UI Design voltado a iniciantes e profissionais em transição de carreira.",
+        "href": "/projetos/ui-boost-landing-page"
+      },
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com/andregalharde"
+      },
+      {
+        "label": "Behance",
+        "href": "https://www.behance.net/andregalharde"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/andre-galharde/"
+      },
+      {
+        "label": "Vamos conversar",
+        "href": "mailto:galharde.design@gmail.com"
+      },
+      {
+        "label": "Voltar ao topo",
+        "href": "#top"
+      }
+    ],
+    "buttons": [
+      {
+        "label": "Abrir menu",
+        "expanded": "false"
+      },
+      {
+        "label": "Mostrar case Adote um Pet",
+        "expanded": null
+      },
+      {
+        "label": "Mostrar case Vértice",
+        "expanded": null
+      },
+      {
+        "label": "Mostrar case Entrelinha",
+        "expanded": null
+      }
+    ],
+    "smallTargets": [
+      {
+        "label": "Galharde — início",
+        "tag": "a",
+        "width": 135,
+        "height": 33
+      },
+      {
+        "label": "Projetos",
+        "tag": "a",
+        "width": 97,
+        "height": 40
+      },
+      {
+        "label": "Sobre",
+        "tag": "a",
+        "width": 79,
+        "height": 40
+      },
+      {
+        "label": "Mostrar case Adote um Pet",
+        "tag": "button",
+        "width": 64,
+        "height": 24
+      },
+      {
+        "label": "Mostrar case Vértice",
+        "tag": "button",
+        "width": 64,
+        "height": 24
+      },
+      {
+        "label": "Mostrar case Entrelinha",
+        "tag": "button",
+        "width": 64,
+        "height": 24
+      },
+      {
+        "label": "Vamos conversar",
+        "tag": "a",
+        "width": 148,
+        "height": 40
+      }
+    ],
+    "sections": [
+      {
+        "id": "",
+        "className": "hero-slider",
+        "heading": "Cases em destaque",
+        "top": 84,
+        "height": 660
+      },
+      {
+        "id": "",
+        "className": "brand-logos",
+        "heading": "",
+        "top": 744,
+        "height": 609
+      },
+      {
+        "id": "",
+        "className": "projects-section",
+        "heading": "Projetos",
+        "top": 1353,
+        "height": 1320
+      }
+    ]
+  },
+  "aboutDesktop": {
+    "url": "http://localhost:3001/sobre",
+    "title": "Sobre mim | André Galharde",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "document": {
+      "width": 1425,
+      "height": 2637
+    },
+    "horizontalOverflow": false,
+    "headings": [
+      {
+        "level": "h1",
+        "text": "UI Designer"
+      },
+      {
+        "level": "h2",
+        "text": "Experiênciae formação"
+      },
+      {
+        "level": "h3",
+        "text": "EXPERIÊNCIA PROFISSIONAL"
+      },
+      {
+        "level": "h3",
+        "text": "FORMAÇÃO"
+      },
+      {
+        "level": "h2",
+        "text": "Vamos conversar"
+      },
+      {
+        "level": "h2",
+        "text": "Ideias fortes começamcom uma boa conversa."
+      }
+    ],
+    "landmarks": {
+      "header": 1,
+      "nav": 3,
+      "main": 1,
+      "footer": 1
+    },
+    "images": {
+      "total": 16,
+      "missingAlt": [],
+      "emptyAlt": 10
+    },
+    "links": [
+      {
+        "label": "Ir para o conteúdo",
+        "href": "#main-content"
+      },
+      {
+        "label": "Galharde — início",
+        "href": "/"
+      },
+      {
+        "label": "Projetos",
+        "href": "/"
+      },
+      {
+        "label": "Sobre",
+        "href": "/sobre"
+      },
+      {
+        "label": "Contato",
+        "href": "mailto:galharde.design@gmail.com"
+      },
+      {
+        "label": "Projetos",
+        "href": "/"
+      },
+      {
+        "label": "Sobre",
+        "href": "/sobre"
+      },
+      {
+        "label": "Currículo",
+        "href": "/documentos/curriculo-galharde-designer.pdf"
+      },
+      {
+        "label": "Baixar Currículo",
+        "href": "/documentos/curriculo-galharde-designer.pdf"
+      },
+      {
+        "label": "E-MAIL · ESCREVERgalharde.design@gmail.com",
+        "href": "mailto:galharde.design@gmail.com"
+      },
+      {
+        "label": "LINKEDIN · CONECTARin/andre-galharde",
+        "href": "https://www.linkedin.com/in/andre-galharde/"
+      },
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com/andregalharde"
+      },
+      {
+        "label": "Behance",
+        "href": "https://www.behance.net/andregalharde"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/andre-galharde/"
+      },
+      {
+        "label": "Vamos conversar",
+        "href": "mailto:galharde.design@gmail.com"
+      },
+      {
+        "label": "Voltar ao topo",
+        "href": "#top"
+      }
+    ],
+    "buttons": [
+      {
+        "label": "Abrir menu",
+        "expanded": "false"
+      },
+      {
+        "label": "Exibir imagem 1 de 4",
+        "expanded": null
+      },
+      {
+        "label": "Exibir imagem 2 de 4",
+        "expanded": null
+      },
+      {
+        "label": "Exibir imagem 3 de 4",
+        "expanded": null
+      },
+      {
+        "label": "Exibir imagem 4 de 4",
+        "expanded": null
+      }
+    ],
+    "smallTargets": [
+      {
+        "label": "Galharde — início",
+        "tag": "a",
+        "width": 135,
+        "height": 33
+      },
+      {
+        "label": "Projetos",
+        "tag": "a",
+        "width": 97,
+        "height": 40
+      },
+      {
+        "label": "Sobre",
+        "tag": "a",
+        "width": 79,
+        "height": 40
+      },
+      {
+        "label": "Exibir imagem 1 de 4",
+        "tag": "button",
+        "width": 56,
+        "height": 27
+      },
+      {
+        "label": "Exibir imagem 2 de 4",
+        "tag": "button",
+        "width": 56,
+        "height": 27
+      },
+      {
+        "label": "Exibir imagem 3 de 4",
+        "tag": "button",
+        "width": 56,
+        "height": 27
+      },
+      {
+        "label": "Exibir imagem 4 de 4",
+        "tag": "button",
+        "width": 56,
+        "height": 27
+      },
+      {
+        "label": "Vamos conversar",
+        "tag": "a",
+        "width": 148,
+        "height": 40
+      }
+    ],
+    "sections": [
+      {
+        "id": "",
+        "className": "about-gallery",
+        "heading": "UI Designer",
+        "top": 84,
+        "height": 679
+      },
+      {
+        "id": "",
+        "className": "about-trajectory",
+        "heading": "Experiênciae formação",
+        "top": 763,
+        "height": 788
+      },
+      {
+        "id": "",
+        "className": "",
+        "heading": "EXPERIÊNCIA PROFISSIONAL",
+        "top": 835,
+        "height": 226
+      },
+      {
+        "id": "",
+        "className": "about-education",
+        "heading": "FORMAÇÃO",
+        "top": 1093,
+        "height": 314
+      },
+      {
+        "id": "",
+        "className": "about-contact",
+        "heading": "Vamos conversar",
+        "top": 1551,
+        "height": 366
+      }
+    ]
+  },
+  "homeMobile": {
+    "url": "http://localhost:3001/",
+    "title": "André Galharde",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "document": {
+      "width": 390,
+      "height": 3463
+    },
+    "horizontalOverflow": false,
+    "headings": [
+      {
+        "level": "h1",
+        "text": "Cases em destaque"
+      },
+      {
+        "level": "h2",
+        "text": "Projetos"
+      },
+      {
+        "level": "h3",
+        "text": "Adote um Pet"
+      },
+      {
+        "level": "h3",
+        "text": "Casa Nova"
+      },
+      {
+        "level": "h3",
+        "text": "UI Boost"
+      },
+      {
+        "level": "h3",
+        "text": "UI Boost"
+      },
+      {
+        "level": "h2",
+        "text": "Ideias fortes começamcom uma boa conversa."
+      }
+    ],
+    "landmarks": {
+      "header": 2,
+      "nav": 3,
+      "main": 1,
+      "footer": 1
+    },
+    "images": {
+      "total": 23,
+      "missingAlt": [],
+      "emptyAlt": 10
+    },
+    "links": [
+      {
+        "label": "Ir para o conteúdo",
+        "href": "#main-content"
+      },
+      {
+        "label": "Galharde — início",
+        "href": "/"
+      },
+      {
+        "label": "Projetos",
+        "href": "/"
+      },
+      {
+        "label": "Sobre",
+        "href": "/sobre"
+      },
+      {
+        "label": "Contato",
+        "href": "mailto:galharde.design@gmail.com"
+      },
+      {
+        "label": "Projetos",
+        "href": "/"
+      },
+      {
+        "label": "Sobre",
+        "href": "/sobre"
+      },
+      {
+        "label": "Currículo",
+        "href": "/documentos/curriculo-galharde-designer.pdf"
+      },
+      {
+        "label": "Acessar case Adote um Pet",
+        "href": "/projetos/adote-um-pet"
+      },
+      {
+        "label": "Acessar case",
+        "href": "/projetos/adote-um-pet"
+      },
+      {
+        "label": "2026Adote um PetProduto digitalUma plataforma mais humana para aproximar pessoas, pets e histórias que merecem continuar.",
+        "href": "/projetos/adote-um-pet"
+      },
+      {
+        "label": "2023Casa NovaSiteO projeto teve como objetivo repensar a presença digital de uma igreja local, conectando fé, comunidade e tecnologia por meio de uma interface acessível e acolhedora.",
+        "href": "/projetos/casa-nova"
+      },
+      {
+        "label": "2022UI BoostAPPNo mundo atual, onde o aprendizado contínuo e acessível é essencial para o crescimento pessoal e profissional, a demanda por ferramentas de estudo eficazes nunca foi tão alta. Com o avanço da tecnologia, aplicativos de estudo se tornaram um meio popular para estudantes e profissionais se capacitarem, oferecendo uma maneira conveniente de adquirir novos conhecimentos e habilidades.",
+        "href": "/projetos/ui-boost-app"
+      },
+      {
+        "label": "2022UI BoostLanding PageCom o crescimento da procura por formação em design digital, surgiu a oportunidade de criar uma landing page estratégica para divulgar um curso de UI Design voltado a iniciantes e profissionais em transição de carreira.",
+        "href": "/projetos/ui-boost-landing-page"
+      },
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com/andregalharde"
+      },
+      {
+        "label": "Behance",
+        "href": "https://www.behance.net/andregalharde"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/andre-galharde/"
+      },
+      {
+        "label": "Vamos conversar",
+        "href": "mailto:galharde.design@gmail.com"
+      },
+      {
+        "label": "Voltar ao topo",
+        "href": "#top"
+      }
+    ],
+    "buttons": [
+      {
+        "label": "Abrir menu",
+        "expanded": "false"
+      },
+      {
+        "label": "Mostrar case Adote um Pet",
+        "expanded": null
+      },
+      {
+        "label": "Mostrar case Vértice",
+        "expanded": null
+      },
+      {
+        "label": "Mostrar case Entrelinha",
+        "expanded": null
+      }
+    ],
+    "smallTargets": [
+      {
+        "label": "Galharde — início",
+        "tag": "a",
+        "width": 112,
+        "height": 28
+      },
+      {
+        "label": "Abrir menu",
+        "tag": "button",
+        "width": 40,
+        "height": 40
+      },
+      {
+        "label": "Mostrar case Adote um Pet",
+        "tag": "button",
+        "width": 64,
+        "height": 24
+      },
+      {
+        "label": "Mostrar case Vértice",
+        "tag": "button",
+        "width": 64,
+        "height": 24
+      },
+      {
+        "label": "Mostrar case Entrelinha",
+        "tag": "button",
+        "width": 64,
+        "height": 24
+      },
+      {
+        "label": "Vamos conversar",
+        "tag": "a",
+        "width": 148,
+        "height": 40
+      }
+    ],
+    "sections": [
+      {
+        "id": "",
+        "className": "hero-slider",
+        "heading": "Cases em destaque",
+        "top": 72,
+        "height": 305
+      },
+      {
+        "id": "",
+        "className": "brand-logos",
+        "heading": "",
+        "top": 377,
+        "height": 525
+      },
+      {
+        "id": "",
+        "className": "projects-section",
+        "heading": "Projetos",
+        "top": 902,
+        "height": 1679
+      }
+    ]
+  },
+  "aboutMobile": {
+    "url": "http://localhost:3001/sobre",
+    "title": "Sobre mim | André Galharde",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "document": {
+      "width": 390,
+      "height": 3053
+    },
+    "horizontalOverflow": false,
+    "headings": [
+      {
+        "level": "h1",
+        "text": "UI Designer"
+      },
+      {
+        "level": "h2",
+        "text": "Experiênciae formação"
+      },
+      {
+        "level": "h3",
+        "text": "EXPERIÊNCIA PROFISSIONAL"
+      },
+      {
+        "level": "h3",
+        "text": "FORMAÇÃO"
+      },
+      {
+        "level": "h2",
+        "text": "Vamos conversar"
+      },
+      {
+        "level": "h2",
+        "text": "Ideias fortes começamcom uma boa conversa."
+      }
+    ],
+    "landmarks": {
+      "header": 1,
+      "nav": 3,
+      "main": 1,
+      "footer": 1
+    },
+    "images": {
+      "total": 16,
+      "missingAlt": [],
+      "emptyAlt": 10
+    },
+    "links": [
+      {
+        "label": "Ir para o conteúdo",
+        "href": "#main-content"
+      },
+      {
+        "label": "Galharde — início",
+        "href": "/"
+      },
+      {
+        "label": "Projetos",
+        "href": "/"
+      },
+      {
+        "label": "Sobre",
+        "href": "/sobre"
+      },
+      {
+        "label": "Contato",
+        "href": "mailto:galharde.design@gmail.com"
+      },
+      {
+        "label": "Projetos",
+        "href": "/"
+      },
+      {
+        "label": "Sobre",
+        "href": "/sobre"
+      },
+      {
+        "label": "Currículo",
+        "href": "/documentos/curriculo-galharde-designer.pdf"
+      },
+      {
+        "label": "Baixar Currículo",
+        "href": "/documentos/curriculo-galharde-designer.pdf"
+      },
+      {
+        "label": "E-MAIL · ESCREVERgalharde.design@gmail.com",
+        "href": "mailto:galharde.design@gmail.com"
+      },
+      {
+        "label": "LINKEDIN · CONECTARin/andre-galharde",
+        "href": "https://www.linkedin.com/in/andre-galharde/"
+      },
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com/andregalharde"
+      },
+      {
+        "label": "Behance",
+        "href": "https://www.behance.net/andregalharde"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/andre-galharde/"
+      },
+      {
+        "label": "Vamos conversar",
+        "href": "mailto:galharde.design@gmail.com"
+      },
+      {
+        "label": "Voltar ao topo",
+        "href": "#top"
+      }
+    ],
+    "buttons": [
+      {
+        "label": "Abrir menu",
+        "expanded": "false"
+      },
+      {
+        "label": "Exibir imagem 1 de 4",
+        "expanded": null
+      },
+      {
+        "label": "Exibir imagem 2 de 4",
+        "expanded": null
+      },
+      {
+        "label": "Exibir imagem 3 de 4",
+        "expanded": null
+      },
+      {
+        "label": "Exibir imagem 4 de 4",
+        "expanded": null
+      }
+    ],
+    "smallTargets": [
+      {
+        "label": "Galharde — início",
+        "tag": "a",
+        "width": 112,
+        "height": 28
+      },
+      {
+        "label": "Abrir menu",
+        "tag": "button",
+        "width": 40,
+        "height": 40
+      },
+      {
+        "label": "Exibir imagem 1 de 4",
+        "tag": "button",
+        "width": 56,
+        "height": 27
+      },
+      {
+        "label": "Exibir imagem 2 de 4",
+        "tag": "button",
+        "width": 56,
+        "height": 27
+      },
+      {
+        "label": "Exibir imagem 3 de 4",
+        "tag": "button",
+        "width": 56,
+        "height": 27
+      },
+      {
+        "label": "Exibir imagem 4 de 4",
+        "tag": "button",
+        "width": 56,
+        "height": 27
+      },
+      {
+        "label": "Vamos conversar",
+        "tag": "a",
+        "width": 148,
+        "height": 40
+      }
+    ],
+    "sections": [
+      {
+        "id": "",
+        "className": "about-gallery",
+        "heading": "UI Designer",
+        "top": 72,
+        "height": 575
+      },
+      {
+        "id": "",
+        "className": "about-trajectory",
+        "heading": "Experiênciae formação",
+        "top": 647,
+        "height": 1031
+      },
+      {
+        "id": "",
+        "className": "",
+        "heading": "EXPERIÊNCIA PROFISSIONAL",
+        "top": 973,
+        "height": 287
+      },
+      {
+        "id": "",
+        "className": "about-education",
+        "heading": "FORMAÇÃO",
+        "top": 1292,
+        "height": 258
+      },
+      {
+        "id": "",
+        "className": "about-contact",
+        "heading": "Vamos conversar",
+        "top": 1678,
+        "height": 493
+      }
+    ]
+  },
+  "browserEvents": []
+}

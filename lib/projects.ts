@@ -24,8 +24,30 @@ export type ProjectStyleGuide = {
   }>
 }
 
+export type CaseStudyImage = {
+  src: string
+  alt: string
+}
+
+export type CaseStudy = {
+  eyebrow: string
+  title: string
+  subtitle: string
+  summary: string
+  year: number
+  discipline: string
+  introduction: { title: string; paragraphs: string[] }
+  media: { hero: CaseStudyImage; productPreview: CaseStudyImage; campaign: CaseStudyImage; solution: CaseStudyImage }
+  solution: { eyebrow: string; title: string; description: string; principles: string[]; affinityTitle: string; affinityDescription: string }
+  styleGuide: { title: string; description: string; typeface: string; colors: Array<{ label: string; hex: string }> }
+  challenges: { title: string; description: string; items: Array<{ title: string; body: string }> }
+  results: { title: string; description: string; items: Array<{ title: string; body: string }> }
+  liveExperience?: "adotapet-home"
+}
+
 export type Project = {
   slug: string
+  tone: "parchment" | "warm" | "saffron" | "graphite"
   title: string
   type: string
   year: number
@@ -50,7 +72,41 @@ export type Project = {
       alt: string
     }
   }
+  caseStudy?: CaseStudy
 }
+
+export type ProjectIntroduction = {
+  slug: string
+  eyebrow: string
+  title: string
+  headline: string
+  description: string
+  heroImage: string
+  logoImage: string
+  colors: Array<{
+    label: string
+    hex: string
+  }>
+}
+
+const projectIntroductions: ProjectIntroduction[] = [
+  {
+    slug: "digitart",
+    eyebrow: "Identidade visual · 2026",
+    title: "Digitart",
+    headline: "Uma identidade criada para avançar no digital.",
+    description:
+      "A Digitart é uma agência especializada na criação de sites. Sua identidade visual une precisão tecnológica e energia criativa, traduzidas por uma linguagem direta, dinâmica e preparada para o ambiente digital.",
+    heroImage: "/media/hero/digitart.png",
+    logoImage: "/media/cases/digitart/digitart-wordmark.svg",
+    colors: [
+      { label: "Azul digital", hex: "#1741CA" },
+      { label: "Amarelo", hex: "#DEB019" },
+      { label: "Azul profundo", hex: "#0B1E5D" },
+      { label: "Azul claro", hex: "#E8EDFC" },
+    ],
+  },
+]
 
 const moodboard = Array.from({ length: 9 }, (_, index) => ({
   src: `/media/projects/moodboard/moodboard-${String(index + 1).padStart(2, "0")}.webp`,
@@ -166,11 +222,12 @@ function uiBoostPalettes(
 
 export const projects: Project[] = [
   {
-    slug: "fluentify",
-    title: "Fluentify",
-    type: "Site",
-    year: 2024,
-    coverImage: "/media/projects/bg-fluentify.png",
+    slug: "adote-um-pet",
+    tone: "parchment",
+    title: "Adote um Pet",
+    type: "Produto digital",
+    year: 2026,
+    coverImage: "/media/hero/adote-um-pet.png",
     heroImage: "/media/projects/bg-fluentify-interna.png",
     sections: [
       {
@@ -216,9 +273,62 @@ export const projects: Project[] = [
       },
     ],
     galleries: desktopGalleries,
+    caseStudy: {
+      eyebrow: "Case 01 · produto digital",
+      title: "Adote um Pet.",
+      subtitle: "Experiência digital para adoção responsável.",
+      summary: "Uma plataforma mais humana para aproximar pessoas, pets e histórias que merecem continuar.",
+      year: 2026,
+      discipline: "UX/UI design",
+      introduction: {
+        title: "Quando a escolha certa encontra uma experiência simples.",
+        paragraphs: [
+          "Adotar um pet é uma decisão afetiva. A experiência digital precisava tornar esse momento mais claro, acolhedor e seguro.",
+          "O projeto organizou descoberta, compatibilidade e contato em uma jornada contínua, sem transformar a adoção em uma burocracia.",
+        ],
+      },
+      media: {
+        hero: { src: "/media/cases/adote-um-pet/hero.jpg", alt: "Dois cães correndo em um caminho ao ar livre" },
+        productPreview: { src: "/media/cases/adote-um-pet/product-preview.png", alt: "Tela do produto Adote um Pet em um celular" },
+        campaign: { src: "/media/cases/adote-um-pet/campaign.jpg", alt: "Gato sendo acolhido por uma pessoa" },
+        solution: { src: "/media/cases/adote-um-pet/solution.jpg", alt: "Cão em um ambiente doméstico" },
+      },
+      solution: {
+        eyebrow: "Solução",
+        title: "Adoção não deveria parecer um processo frio.",
+        description: "A interface usa informação progressiva, linguagem próxima e elementos visuais otimistas para ajudar cada pessoa a avançar com confiança.",
+        principles: ["Busca orientada por afinidade", "Perfis completos e objetivos", "Contato claro com os abrigos"],
+        affinityTitle: "Menos fricção. Mais afinidade.",
+        affinityDescription: "Filtros, histórias e informações essenciais trabalham juntos para que a escolha seja mais consciente e natural.",
+      },
+      styleGuide: {
+        title: "Uma linguagem otimista e confiável.",
+        description: "A direção visual combina contraste, cor e tipografia para tornar a jornada leve sem reduzir a seriedade da decisão.",
+        typeface: "Poppins",
+        colors: [
+          { label: "Azul", hex: "#284CFF" }, { label: "Terracota", hex: "#ED5F2F" }, { label: "Blush", hex: "#FCF5F2" }, { label: "Pêssego", hex: "#FD997B" }, { label: "Tinta", hex: "#0A0D14" },
+        ],
+      },
+      challenges: {
+        title: "Projetar confiança sem perder a leveza.",
+        description: "Cada decisão de interface precisava equilibrar informação, afeto e autonomia para aproximar pessoas e animais com responsabilidade.",
+        items: [
+          { title: "Clareza", body: "Organizar informações essenciais sem sobrecarregar." }, { title: "Compatibilidade", body: "Ajudar a pessoa a reconhecer afinidade real." }, { title: "Confiança", body: "Trazer transparência antes do primeiro contato." }, { title: "Acessibilidade", body: "Manter leitura e interação simples em todos os dispositivos." }, { title: "Escala", body: "Criar uma base visual pronta para novos abrigos e conteúdos." },
+        ],
+      },
+      results: {
+        title: "Uma base de produto pronta para crescer.",
+        description: "O projeto organizou pesquisa, navegação e contato em um sistema coerente de interface.",
+        items: [
+          { title: "Jornada organizada", body: "Da busca ao contato, as decisões foram conectadas em uma experiência contínua." }, { title: "Sistema reutilizável", body: "Padrões de interface prontos para novas páginas, conteúdo e evolução do produto." }, { title: "Direção tangível", body: "Fluxos e linguagem visual documentados para transformar estratégia em telas." },
+        ],
+      },
+      liveExperience: "adotapet-home",
+    },
   },
   {
     slug: "casa-nova",
+    tone: "warm",
     title: "Casa Nova",
     type: "Site",
     year: 2023,
@@ -272,6 +382,7 @@ export const projects: Project[] = [
   },
   {
     slug: "ui-boost-app",
+    tone: "saffron",
     title: "UI Boost",
     type: "APP",
     year: 2022,
@@ -342,6 +453,7 @@ export const projects: Project[] = [
   },
   {
     slug: "ui-boost-landing-page",
+    tone: "graphite",
     title: "UI Boost",
     type: "Landing Page",
     year: 2022,
@@ -400,4 +512,8 @@ export const projects: Project[] = [
 
 export function getProjectBySlug(slug: string) {
   return projects.find((project) => project.slug === slug)
+}
+
+export function getProjectIntroductionBySlug(slug: string) {
+  return projectIntroductions.find((project) => project.slug === slug)
 }

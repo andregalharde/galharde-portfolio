@@ -1,0 +1,152 @@
+:global(html[data-portfolio-intro]) {
+  overflow: hidden;
+}
+
+/* Before hydration, only the ivory screen and the small point are needed.
+   No script means no attribute and no cover. The bootstrap also has a hard timeout. */
+:global(html[data-portfolio-intro]:not(:has(#portfolio-intro[open])))::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  background: var(--color-ivory, #FAF6EE);
+  pointer-events: none;
+  animation: failsafe 3.8s step-end forwards;
+}
+
+:global(html[data-portfolio-intro]:not(:has(#portfolio-intro[open])))::after {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: clamp(16px, 2.1vw, 30px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--color-action, #E73D16);
+  z-index: 9999;
+  pointer-events: none;
+  animation: failsafe 3.8s step-end forwards;
+}
+
+.intro {
+  --intro-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  background: var(--color-ivory, #FAF6EE);
+  color: #1C1917;
+}
+
+.intro[open] {
+  display: grid;
+  place-items: center;
+  animation: exit 3600ms linear var(--intro-elapsed, 0ms) both;
+}
+
+.intro::backdrop { background: transparent; }
+
+.scene {
+  display: block;
+  width: min(600px, 44vw);
+  height: auto;
+  overflow: visible;
+}
+
+.dot, .clip, .portrait, .symbol {
+  animation-duration: 3600ms;
+  animation-delay: var(--intro-elapsed, 0ms);
+  animation-timing-function: var(--intro-ease);
+  animation-fill-mode: both;
+}
+
+.dot { animation-name: dot; }
+.clip { transform-origin: 300px 210px; animation-name: clip; }
+.portrait { animation-name: portrait; }
+.symbol { animation-name: symbol; }
+.letter {
+  animation: letter 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.skip {
+  position: absolute;
+  right: max(32px, env(safe-area-inset-right));
+  bottom: max(24px, env(safe-area-inset-bottom));
+  min-height: 44px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #1C1917;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.skip span { opacity: 0.6; font-size: 10px; }
+.skip:hover { background: rgb(28 25 23 / 5%); }
+.skip:focus-visible { outline: 2px solid #1C1917; outline-offset: 4px; }
+
+/* 0–160ms point; 160–500ms expansion; 500–1300ms portrait hold;
+   1300–1600ms retraction; 1600–2000ms logo assembly;
+   2000–2600ms letters; 2600–3200ms complete logo; 3200–3600ms exit. */
+@keyframes dot {
+  0% { transform: translate(300px, 202px) scale(0.75); opacity: 0; }
+  4.4444% { transform: translate(300px, 210px) scale(1); opacity: 1; }
+  13.8889%, 36.1111% { transform: translate(300px, 210px) scale(11); }
+  44.4444% { transform: translate(300px, 210px) scale(1); }
+  55.5556%, 100% { transform: translate(122.517px, 162.811px) scale(1); opacity: 1; }
+}
+
+@keyframes clip {
+  0%, 4.4444% { transform: scale(0.09); }
+  13.8889%, 36.1111% { transform: scale(1); }
+  44.4444%, 100% { transform: scale(0.09); }
+}
+
+@keyframes portrait {
+  0%, 5% { opacity: 0; }
+  13.8889%, 36.1111% { opacity: 1; }
+  43.3333%, 100% { opacity: 0; }
+}
+
+@keyframes symbol {
+  0%, 47.2222% { opacity: 0; }
+  55.5556%, 100% { opacity: 1; }
+}
+
+/* Eight original vector letters: 320ms + seven 40ms offsets = 600ms. */
+@keyframes letter {
+  from { opacity: 0; transform: translateY(1.8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes exit {
+  0%, 88.8889% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes failsafe { to { visibility: hidden; } }
+
+@media (max-width: 760px) {
+  .scene { width: min(420px, calc(100vw - 48px)); }
+  .skip { right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :global(html[data-portfolio-intro]) { overflow: auto; }
+  :global(html[data-portfolio-intro])::before,
+  :global(html[data-portfolio-intro])::after,
+  .intro[open] { display: none; animation: none; }
+  .intro * { animation: none; }
+}

@@ -2,9 +2,9 @@ import type { Metadata, Viewport } from "next"
 import { Plus_Jakarta_Sans } from "next/font/google"
 import type { ReactNode } from "react"
 
-import { Footer } from "@/components/layout/footer"
-import { Header } from "@/components/layout/header"
+import { SiteShell } from "@/components/layout/site-shell"
 import { siteConfig } from "@/lib/site-config"
+import { portfolioIntroBootstrap } from "@/lib/portfolio-intro"
 
 import "./globals.css"
 
@@ -38,7 +38,10 @@ export const metadata: Metadata = {
     description: siteConfig.description,
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: [
+      { url: "/brand/favicon-light.ico", media: "(prefers-color-scheme: light)" },
+      { url: "/brand/favicon-dark.ico", media: "(prefers-color-scheme: dark)" },
+    ],
   },
 }
 
@@ -50,19 +53,12 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="pt-BR" className={plusJakartaSans.variable}>
-      <body className="flex min-h-svh flex-col">
-        <a
-          href="#main-content"
-          className="fixed left-container-gutter top-component z-50 -translate-y-[200%] rounded-ui bg-primary px-control-x py-component-sm text-small font-semibold text-primary-foreground focus:translate-y-0"
-        >
-          Ir para o conteúdo
-        </a>
-        <Header />
-        <main id="main-content" className="flex-1">
-          {children}
-        </main>
-        <Footer />
+    <html lang="pt-BR" className={plusJakartaSans.variable} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: portfolioIntroBootstrap }} />
+      </head>
+      <body id="top" className="flex min-h-svh flex-col">
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
   )
