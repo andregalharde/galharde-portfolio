@@ -1,0 +1,253 @@
+- generic [active] [ref=f71e1]:
+  - main [ref=f71e2]:
+    - region "Experiência demonstrativa AdotaPet" [ref=f71e3]:
+      - generic [ref=f71e4]:
+        - link "AdotaPet — início" [ref=f71e5] [cursor=pointer]:
+          - /url: "#adoptapet-home"
+          - generic [ref=f71e7]: AdotaPet
+        - navigation "Navegação da demonstração AdotaPet" [ref=f71e8]:
+          - link "Nossos Pets" [ref=f71e9] [cursor=pointer]:
+            - /url: "#adoptapet-pets"
+          - link "Quem Somos" [ref=f71e10] [cursor=pointer]:
+            - /url: "#adoptapet-process"
+          - link "Ajuda" [ref=f71e11] [cursor=pointer]:
+            - /url: "#adoptapet-faq"
+          - link "Contato" [ref=f71e12] [cursor=pointer]:
+            - /url: "#adoptapet-contact"
+        - link "Adote um pet" [ref=f71e14] [cursor=pointer]:
+          - /url: "#adoptapet-pets"
+      - generic [ref=f71e17]:
+        - generic [ref=f71e18]:
+          - generic [ref=f71e19]:
+            - paragraph [ref=f71e20]: AU AU :)
+            - heading "Encontre um pet ideal para você" [level=2] [ref=f71e21]: Encontre um petideal para você
+            - paragraph [ref=f71e22]: Resgate um animalzinho que esteja abandonado para te fazer companhia e contribua para a humanidade.
+          - link "Conhecer Xereta" [ref=f71e23] [cursor=pointer]:
+            - /url: /adoteumpet/xereta
+            - img "Gato laranja deitado" [ref=f71e25]
+            - generic [ref=f71e26]:
+              - generic [ref=f71e27]:
+                - strong [ref=f71e28]: Xereta
+                - generic [ref=f71e29]: Guarulhos, São Paulo
+              - generic [ref=f71e30]: Fêmea
+              - generic [ref=f71e32]: 3 meses
+        - form "Buscar pets" [ref=f71e34]:
+          - generic [ref=f71e37]:
+            - strong [ref=f71e38]: Cidade
+            - textbox "Cidade" [ref=f71e39]:
+              - /placeholder: Busque por cidade
+          - generic [ref=f71e42]:
+            - strong [ref=f71e43]: Bairro
+            - textbox "Bairro" [ref=f71e44]:
+              - /placeholder: Busque por bairro
+          - generic [ref=f71e47]:
+            - strong [ref=f71e48]: Tipo de pet
+            - combobox "Tipo de pet" [ref=f71e49]:
+              - option "Escolha seu pet" [disabled] [selected]
+              - option "Cachorro"
+              - option "Gato"
+          - generic [ref=f71e52]:
+            - strong [ref=f71e53]: Raça
+            - textbox "Raça" [ref=f71e54]:
+              - /placeholder: Busque por raça
+          - button "Buscar pet" [ref=f71e55] [cursor=pointer]
+      - region [ref=f71e57]:
+        - generic [ref=f71e58]:
+          - generic [ref=f71e59]:
+            - paragraph [ref=f71e60]: PETS PRA VOCÊ
+            - heading "Descubra o pet que faz sentido para você" [level=2] [ref=f71e61]
+            - paragraph [ref=f71e62]: Aproveite as oportunidades abaixo e encontre o seu Pet ideal.
+          - generic [ref=f71e64]:
+            - article [ref=f71e65]:
+              - img "Bambina" [ref=f71e67]
+              - generic [ref=f71e68]:
+                - generic [ref=f71e69]:
+                  - heading "Bambina" [level=3] [ref=f71e70]
+                  - paragraph [ref=f71e71]: Jardim Imperial, Atibaia
+                - button "Adicionar Bambina aos favoritos" [ref=f71e72] [cursor=pointer]
+              - generic [ref=f71e74]:
+                - generic [ref=f71e75]: Fêmea
+                - generic [ref=f71e77]: 1 mês
+            - article [ref=f71e79]:
+              - img "Lolo" [ref=f71e81]
+              - generic [ref=f71e82]:
+                - generic [ref=f71e83]:
+                  - heading "Lolo" [level=3] [ref=f71e84]
+                  - paragraph [ref=f71e85]: Jardim Emuarama, Embu das Artes
+                - button "Adicionar Lolo aos favoritos" [ref=f71e86] [cursor=pointer]
+              - generic [ref=f71e88]:
+                - generic [ref=f71e89]: Fêmea
+                - generic [ref=f71e91]: 1 mês
+            - article [ref=f71e93]:
+              - img "Charlote" [ref=f71e95]
+              - generic [ref=f71e96]:
+                - generic [ref=f71e97]:
+                  - heading "Charlote" [level=3] [ref=f71e98]
+                  - paragraph [ref=f71e99]: São Miguel, São Paulo
+                - button "Adicionar Charlote aos favoritos" [ref=f71e100] [cursor=pointer]
+              - generic [ref=f71e102]:
+                - generic [ref=f71e103]: Macho
+                - generic [ref=f71e105]: 3 meses
+            - article [ref=f71e107]:
+              - img "Linda" [ref=f71e109]
+              - generic [ref=f71e110]:
+                - generic [ref=f71e111]:
+                  - heading "Linda" [level=3] [ref=f71e112]
+                  - paragraph [ref=f71e113]: Jardim Paulista, Guarulhos
+                - button "Adicionar Linda aos favoritos" [ref=f71e114] [cursor=pointer]
+              - generic [ref=f71e116]:
+                - generic [ref=f71e117]: Macho
+                - generic [ref=f71e119]: 3 meses
+            - article [ref=f71e121]:
+              - img "Teresa" [ref=f71e123]
+              - generic [ref=f71e124]:
+                - generic [ref=f71e125]:
+                  - heading "Teresa" [level=3] [ref=f71e126]
+                  - paragraph [ref=f71e127]: Jardim Celeste, Pernambuco
+                - button "Adicionar Teresa aos favoritos" [ref=f71e128] [cursor=pointer]
+              - generic [ref=f71e130]:
+                - generic [ref=f71e131]: Fêmea
+                - generic [ref=f71e133]: 1 mês
+            - article [ref=f71e135]:
+              - img "Rainha" [ref=f71e137]
+              - generic [ref=f71e138]:
+                - generic [ref=f71e139]:
+                  - heading "Rainha" [level=3] [ref=f71e140]
+                  - paragraph [ref=f71e141]: Cachoeirinha, São Paulo
+                - button "Adicionar Rainha aos favoritos" [ref=f71e142] [cursor=pointer]
+              - generic [ref=f71e144]:
+                - generic [ref=f71e145]: Fêmea
+                - generic [ref=f71e147]: 4 meses
+            - article [ref=f71e149]:
+              - img "Dudu" [ref=f71e151]
+              - generic [ref=f71e152]:
+                - generic [ref=f71e153]:
+                  - heading "Dudu" [level=3] [ref=f71e154]
+                  - paragraph [ref=f71e155]: São Miguel, São Paulo
+                - button "Adicionar Dudu aos favoritos" [ref=f71e156] [cursor=pointer]
+              - generic [ref=f71e158]:
+                - generic [ref=f71e159]: Macho
+                - generic [ref=f71e161]: 3 meses
+          - generic [ref=f71e163]:
+            - button "Ver pets anteriores" [disabled] [ref=f71e164]
+            - button "Ver próximos pets" [ref=f71e166] [cursor=pointer]
+      - region [ref=f71e168]:
+        - generic [ref=f71e169]:
+          - generic [ref=f71e170]:
+            - paragraph [ref=f71e171]: NOSSO PROCESSO DE ADOÇÃO
+            - heading "Entenda como é fácil adotar um pet" [level=2] [ref=f71e172]
+            - paragraph [ref=f71e173]: Nós estamos aqui para simplificar a vinda do seu amiguinho.
+          - generic [ref=f71e174]:
+            - article [ref=f71e175]:
+              - heading "Encontre o pet ideal para você" [level=3] [ref=f71e177]
+              - paragraph [ref=f71e178]: Tudo começa escolhendo os animalzinhos disponíveis pra você.
+            - article [ref=f71e179]:
+              - heading "Crie o seu cadastro e solicite seu requerimento" [level=3] [ref=f71e181]
+              - paragraph [ref=f71e182]: Com um cadastro sem burocracia, você solicita o desejo para a ONG.
+            - article [ref=f71e183]:
+              - heading "Aguarde aprovação para ir buscar seu Pet" [level=3] [ref=f71e185]
+              - paragraph [ref=f71e186]: Após solicitar o desejo aguarde 24 horas e, sendo aprovado, já pode buscar seu Pet.
+      - region "Convite para adoção" [ref=f71e187]:
+        - generic [ref=f71e188]:
+          - generic [ref=f71e192]:
+            - heading "Faça a sua parte e adote um animalzinho" [level=2] [ref=f71e193]
+            - link "Adote um Pet" [ref=f71e194] [cursor=pointer]:
+              - /url: "#adoptapet-pets"
+          - img "Dois cachorros sorrindo" [ref=f71e201]
+          - img "Gato brincando deitado" [ref=f71e204]
+      - region [ref=f71e207]:
+        - generic [ref=f71e208]:
+          - generic [ref=f71e209]:
+            - generic [ref=f71e210]:
+              - paragraph [ref=f71e211]: FEEDBACK DE QUEM JÁ ADOTOU
+              - heading "O que algumas pessoas que adotaram estão falando" [level=2] [ref=f71e212]
+            - generic [ref=f71e213]:
+              - button "Depoimento anterior" [disabled] [ref=f71e214]
+              - button "Próximo depoimento" [ref=f71e216] [cursor=pointer]
+          - generic [ref=f71e219]:
+            - blockquote [ref=f71e220]:
+              - strong [ref=f71e221]: Lucas Ferreira
+              - paragraph [ref=f71e222]: Estou super apaixonado no meu gato, ele é super carinhoso e adora comer.
+            - blockquote [ref=f71e223]:
+              - strong [ref=f71e224]: Júlia Matos
+              - paragraph [ref=f71e225]: Queria passar para agradecer pelo cachorrinho que eu adotei, ele é perfeito.
+            - blockquote [ref=f71e226]:
+              - strong [ref=f71e227]: Andre Galharde
+              - paragraph [ref=f71e228]: Se eu já tivesse conhecido esse gatinho antes eu já tinha adotado ele.
+            - blockquote [ref=f71e229]:
+              - strong [ref=f71e230]: Fernanda
+              - paragraph [ref=f71e231]: Tudo começa escolhendo os animalzinhos disponíveis pra você.
+      - region [ref=f71e232]:
+        - generic [ref=f71e233]:
+          - generic [ref=f71e234]:
+            - paragraph [ref=f71e235]: FAQ
+            - heading "Dúvidas Frequentes" [level=2] [ref=f71e236]
+            - paragraph [ref=f71e237]:
+              - text: Qualquer dúvida entre em contato com a nossa central de ajuda
+              - link "contato@adotapet.com.br" [ref=f71e238] [cursor=pointer]:
+                - /url: mailto:contato@adotapet.com.br
+          - generic "Perguntas frequentes" [ref=f71e239]:
+            - generic [ref=f71e240]:
+              - heading [level=3] [ref=f71e241]:
+                - button "Como eu faço para adotar um Pet?" [expanded] [ref=f71e242] [cursor=pointer]
+              - paragraph [ref=f71e246]:
+                - text: Qualquer dúvida entre em contato com a nossa central de ajuda
+                - link "contato@adotapet.com.br" [ref=f71e247] [cursor=pointer]:
+                  - /url: mailto:contato@adotapet.com.br
+            - heading [level=3] [ref=f71e249]:
+              - button "Quais são os cuidados necessário?" [ref=f71e250] [cursor=pointer]
+            - heading [level=3] [ref=f71e254]:
+              - button "Como eu faço para adotar um Pet?" [ref=f71e255] [cursor=pointer]
+            - heading [level=3] [ref=f71e259]:
+              - button "Posso adotar mais de um Pet?" [ref=f71e260] [cursor=pointer]
+      - generic [ref=f71e264]:
+        - generic [ref=f71e265]:
+          - generic [ref=f71e266]:
+            - link "AdotaPet" [ref=f71e267] [cursor=pointer]:
+              - /url: "#adoptapet-home"
+            - strong [ref=f71e270]: Não compre, Adote!!!
+            - link "contato@adotapet.com.br" [ref=f71e271] [cursor=pointer]:
+              - /url: mailto:contato@adotapet.com.br
+          - generic [ref=f71e272]:
+            - generic [ref=f71e273]:
+              - strong [ref=f71e274]: Nosso Pets
+              - link "Cachorros" [ref=f71e275] [cursor=pointer]:
+                - /url: "#adoptapet-pets"
+              - link "Gatos" [ref=f71e276] [cursor=pointer]:
+                - /url: "#adoptapet-pets"
+              - link "Cavalos" [ref=f71e277] [cursor=pointer]:
+                - /url: "#adoptapet-pets"
+              - link "Pássaros" [ref=f71e278] [cursor=pointer]:
+                - /url: "#adoptapet-pets"
+            - generic [ref=f71e279]:
+              - strong [ref=f71e280]: Soluções
+              - link "Faça parte" [ref=f71e281] [cursor=pointer]:
+                - /url: "#adoptapet-process"
+              - link "Parceiros" [ref=f71e282] [cursor=pointer]:
+                - /url: "#adoptapet-process"
+            - generic [ref=f71e283]:
+              - strong [ref=f71e284]: Institucional
+              - link "Sobre nós" [ref=f71e285] [cursor=pointer]:
+                - /url: "#adoptapet-process"
+              - link "Ajuda" [ref=f71e286] [cursor=pointer]:
+                - /url: "#adoptapet-faq"
+              - link "Contato" [ref=f71e287] [cursor=pointer]:
+                - /url: "#adoptapet-contact"
+            - generic [ref=f71e288]:
+              - strong [ref=f71e289]: Central de Ajuda
+              - link "Política de Privacidade" [ref=f71e290] [cursor=pointer]:
+                - /url: "#adoptapet-faq"
+              - link "Central de Ajuda" [ref=f71e291] [cursor=pointer]:
+                - /url: "#adoptapet-faq"
+        - generic [ref=f71e292]:
+          - paragraph [ref=f71e293]: © Copyright 2026 Adotapet - todos os direitos reservados
+          - generic [ref=f71e294]:
+            - link "Instagram" [ref=f71e295] [cursor=pointer]:
+              - /url: https://www.instagram.com/
+            - link "X" [ref=f71e297] [cursor=pointer]:
+              - /url: https://x.com/
+            - link "Facebook" [ref=f71e299] [cursor=pointer]:
+              - /url: https://www.facebook.com/
+            - link "YouTube" [ref=f71e301] [cursor=pointer]:
+              - /url: https://www.youtube.com/
+  - button "Open Next.js Dev Tools" [ref=f71e308] [cursor=pointer]

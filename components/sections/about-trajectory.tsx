@@ -12,8 +12,6 @@ const education = [
   { school: "Design Circuit", period: "2026 - Cursando" },
   { school: "Design Boost", period: "2025 - Concluído" },
   { school: "Intuitive Pixel", period: "2024 - Concluído" },
-  { school: "UI Boost", period: "2022 - Concluído" },
-  { school: "Curso de Figma", period: "2021 - Concluído" },
 ] as const
 
 export function AboutTrajectory({ home = false }: { home?: boolean }) {

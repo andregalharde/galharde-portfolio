@@ -1,0 +1,155 @@
+- generic [active] [ref=f72e1]:
+  - link "Ir para o conteúdo" [ref=f72e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner:
+    - generic [ref=f72e3]:
+      - link "Galharde — início" [ref=f72e4] [cursor=pointer]:
+        - /url: /
+        - img "Galharde" [ref=f72e5]
+      - button "Abrir menu" [ref=f72e7] [cursor=pointer]
+  - main [ref=f72e10]:
+    - article [ref=f72e11]:
+      - generic [ref=f72e12]:
+        - generic [ref=f72e13]:
+          - generic [ref=f72e14]:
+            - heading "Adote um Pet." [level=1] [ref=f72e15]: Adote umPet.
+            - paragraph [ref=f72e16]: Experiência digital para adoção responsável.
+          - generic [ref=f72e17]:
+            - paragraph [ref=f72e18]: Uma plataforma mais humana para aproximar pessoas, pets e histórias que merecem continuar.
+            - generic [ref=f72e19]:
+              - generic [ref=f72e20]:
+                - term [ref=f72e21]: Ano
+                - definition [ref=f72e22]: "2026"
+              - generic [ref=f72e23]:
+                - term [ref=f72e24]: Atuação
+                - definition [ref=f72e25]: UX/UI design
+        - generic [ref=f72e26]:
+          - figure [ref=f72e27]:
+            - img "Dois cães correndo em um caminho ao ar livre" [ref=f72e28]
+          - figure [ref=f72e29]:
+            - img "Hero da página inicial do AdotaPet" [ref=f72e30]
+          - link "Acesse o site do Adota Pet" [ref=f72e31] [cursor=pointer]:
+            - /url: /adoteumpet
+      - generic [ref=f72e34]:
+        - generic [ref=f72e35]:
+          - paragraph [ref=f72e36]: Contexto
+          - heading "Quando a escolha certa encontra uma experiência simples." [level=2] [ref=f72e37]
+        - generic [ref=f72e38]:
+          - paragraph [ref=f72e39]: Adotar um pet é uma decisão afetiva. A experiência digital precisava tornar esse momento mais claro, acolhedor e seguro.
+          - paragraph [ref=f72e40]: O projeto organizou descoberta, compatibilidade e contato em uma jornada contínua, sem transformar a adoção em uma burocracia.
+      - generic [ref=f72e42]:
+        - generic [ref=f72e43]:
+          - paragraph [ref=f72e44]: Solução
+          - heading "Adoção não deveria parecer um processo frio." [level=2] [ref=f72e45]
+          - paragraph [ref=f72e46]: A interface usa informação progressiva, linguagem próxima e elementos visuais otimistas para ajudar cada pessoa a avançar com confiança.
+          - list [ref=f72e47]:
+            - listitem [ref=f72e48]: Busca orientada por afinidade
+            - listitem [ref=f72e49]: Perfis completos e objetivos
+            - listitem [ref=f72e50]: Contato claro com os abrigos
+        - figure [ref=f72e51]:
+          - img "Cão em um ambiente doméstico" [ref=f72e52]
+      - generic [ref=f72e54]:
+        - figure [ref=f72e55]:
+          - img "Gato sendo acolhido por uma pessoa" [ref=f72e56]
+        - generic [ref=f72e57]:
+          - paragraph [ref=f72e58]: Solução
+          - heading "Menos fricção. Mais afinidade." [level=2] [ref=f72e59]
+          - paragraph [ref=f72e60]: Filtros, histórias e informações essenciais trabalham juntos para que a escolha seja mais consciente e natural.
+      - generic [ref=f72e61]:
+        - generic [ref=f72e62]:
+          - paragraph [ref=f72e63]: Style guide
+          - heading "Uma linguagem otimista e confiável." [level=2] [ref=f72e64]
+          - paragraph [ref=f72e65]: A direção visual combina contraste, cor e tipografia para tornar a jornada leve sem reduzir a seriedade da decisão.
+        - generic [ref=f72e66]:
+          - paragraph [ref=f72e67]: Poppins
+          - generic [ref=f72e68]:
+            - generic [ref=f72e69]:
+              - strong [ref=f72e71]: Azul
+              - code [ref=f72e72]: "#284CFF"
+            - generic [ref=f72e73]:
+              - strong [ref=f72e75]: Terracota
+              - code [ref=f72e76]: "#ED5F2F"
+            - generic [ref=f72e77]:
+              - strong [ref=f72e79]: Blush
+              - code [ref=f72e80]: "#FCF5F2"
+            - generic [ref=f72e81]:
+              - strong [ref=f72e83]: Pêssego
+              - code [ref=f72e84]: "#FD997B"
+            - generic [ref=f72e85]:
+              - strong [ref=f72e87]: Tinta
+              - code [ref=f72e88]: "#0A0D14"
+      - generic [ref=f72e90]:
+        - generic [ref=f72e91]:
+          - paragraph [ref=f72e92]: Desafios
+          - heading "Projetar confiança sem perder a leveza." [level=2] [ref=f72e93]
+          - paragraph [ref=f72e94]: Cada decisão de interface precisava equilibrar informação, afeto e autonomia para aproximar pessoas e animais com responsabilidade.
+        - list [ref=f72e95]:
+          - listitem [ref=f72e96]:
+            - generic [ref=f72e97]: "01"
+            - strong [ref=f72e98]: Clareza
+            - paragraph [ref=f72e99]: Organizar informações essenciais sem sobrecarregar.
+          - listitem [ref=f72e100]:
+            - generic [ref=f72e101]: "02"
+            - strong [ref=f72e102]: Compatibilidade
+            - paragraph [ref=f72e103]: Ajudar a pessoa a reconhecer afinidade real.
+          - listitem [ref=f72e104]:
+            - generic [ref=f72e105]: "03"
+            - strong [ref=f72e106]: Confiança
+            - paragraph [ref=f72e107]: Trazer transparência antes do primeiro contato.
+          - listitem [ref=f72e108]:
+            - generic [ref=f72e109]: "04"
+            - strong [ref=f72e110]: Acessibilidade
+            - paragraph [ref=f72e111]: Manter leitura e interação simples em todos os dispositivos.
+          - listitem [ref=f72e112]:
+            - generic [ref=f72e113]: "05"
+            - strong [ref=f72e114]: Escala
+            - paragraph [ref=f72e115]: Criar uma base visual pronta para novos abrigos e conteúdos.
+      - generic [ref=f72e116]:
+        - generic [ref=f72e117]:
+          - paragraph [ref=f72e118]: Resultados
+          - heading "Uma base de produto pronta para crescer." [level=2] [ref=f72e119]
+          - paragraph [ref=f72e120]: O projeto organizou pesquisa, navegação e contato em um sistema coerente de interface.
+        - list [ref=f72e121]:
+          - listitem [ref=f72e122]:
+            - generic [ref=f72e123]: "01"
+            - heading "Jornada organizada" [level=3] [ref=f72e124]
+            - paragraph [ref=f72e125]: Da busca ao contato, as decisões foram conectadas em uma experiência contínua.
+          - listitem [ref=f72e126]:
+            - generic [ref=f72e127]: "02"
+            - heading "Sistema reutilizável" [level=3] [ref=f72e128]
+            - paragraph [ref=f72e129]: Padrões de interface prontos para novas páginas, conteúdo e evolução do produto.
+          - listitem [ref=f72e130]:
+            - generic [ref=f72e131]: "03"
+            - heading "Direção tangível" [level=3] [ref=f72e132]
+            - paragraph [ref=f72e133]: Fluxos e linguagem visual documentados para transformar estratégia em telas.
+  - contentinfo [ref=f72e134]:
+    - generic [ref=f72e135]:
+      - generic [ref=f72e136]:
+        - img "Galharde" [ref=f72e139]
+        - generic [ref=f72e140]:
+          - paragraph [ref=f72e141]: Disponível para novos projetos
+          - heading "Ideias fortes começam com uma boa conversa." [level=2] [ref=f72e142]: Ideias fortes começamcom uma boa conversa.
+          - link "Vamos conversar" [ref=f72e143] [cursor=pointer]:
+            - /url: mailto:galharde.design@gmail.com
+      - generic [ref=f72e146]:
+        - navigation "Redes sociais" [ref=f72e147]:
+          - list [ref=f72e148]:
+            - listitem [ref=f72e149]:
+              - link "Enviar e-mail" [ref=f72e150] [cursor=pointer]:
+                - /url: mailto:galharde.design@gmail.com
+            - listitem [ref=f72e151]:
+              - link "Instagram" [ref=f72e152] [cursor=pointer]:
+                - /url: https://www.instagram.com/andregalharde
+            - listitem [ref=f72e153]:
+              - link "Behance" [ref=f72e154] [cursor=pointer]:
+                - /url: https://www.behance.net/andregalharde
+                - text: Bē
+            - listitem [ref=f72e155]:
+              - link "LinkedIn" [ref=f72e156] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/andre-galharde/
+        - paragraph [ref=f72e157]:
+          - strong [ref=f72e158]: © 2026 Galharde.
+          - text: Todos os Direitos Reservados.
+        - link "Voltar ao topo" [ref=f72e159] [cursor=pointer]:
+          - /url: "#top"
+  - button "Open Next.js Dev Tools" [ref=f72e169] [cursor=pointer]

@@ -3,34 +3,57 @@
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { useEffect, useState } from "react"
-
-import { siteConfig } from "@/lib/site-config"
+import { useEffect, useRef, useState } from "react"
 
 function Header() {
   const pathname = usePathname()
   const isHome = pathname === "/"
+  const NavigationLink = isHome ? "a" : Link
   const navigation = [
     { href: isHome ? "#projetos" : "/#projetos", label: "Projetos" },
-    { href: isHome ? "#sobre" : "/#sobre", label: "Sobre" },
+    { href: isHome ? "#sobre" : "/#sobre", label: "Sobre Mim" },
     { href: isHome ? "#contato" : "/#contato", label: "Contato" },
   ]
-  const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState<string | null>(null)
+  const headerRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    const updateScrollState = () => setIsScrolled(window.scrollY > 16)
+    if (pathname !== "/") return
 
-    updateScrollState()
-    window.addEventListener("scroll", updateScrollState, { passive: true })
+    const sections = ["projetos", "sobre", "contato"]
+      .map((id) => document.getElementById(id))
+      .filter((section): section is HTMLElement => section !== null)
+    let frame = 0
 
-    return () => window.removeEventListener("scroll", updateScrollState)
-  }, [])
+    const update = () => {
+      frame = 0
+      const headerBottom = headerRef.current?.getBoundingClientRect().bottom ?? 0
+      const scrollPadding = Number.parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0
+      const reached = sections.filter((section) => {
+        const scrollMargin = Number.parseFloat(getComputedStyle(section).scrollMarginTop) || 0
+        const activationLine = Math.max(headerBottom, scrollPadding + scrollMargin) + 2
+        return section.getBoundingClientRect().top <= activationLine
+      })
+      setActiveSection(reached.at(-1)?.id ?? null)
+    }
+    const scheduleUpdate = () => {
+      if (!frame) frame = window.requestAnimationFrame(update)
+    }
 
-  const scrollState = isScrolled ? "scrolled" : "top"
+    scheduleUpdate()
+    window.addEventListener("scroll", scheduleUpdate, { passive: true })
+    window.addEventListener("resize", scheduleUpdate)
+
+    return () => {
+      window.cancelAnimationFrame(frame)
+      window.removeEventListener("scroll", scheduleUpdate)
+      window.removeEventListener("resize", scheduleUpdate)
+    }
+  }, [pathname])
 
   return (
-    <header className="site-header" data-scroll-state={scrollState}>
+    <header ref={headerRef} className="site-header">
       <div className="site-header__frame">
         <Link href="/" aria-label="Galharde — início" className="site-header__logo-link">
           <Image
@@ -42,24 +65,19 @@ function Header() {
             unoptimized
             className="site-header__logo site-header__logo--wordmark"
           />
-          <Image
-            src="/brand/logo-minimal.svg"
-            alt=""
-            width={26}
-            height={38}
-            loading="eager"
-            unoptimized
-            className="site-header__logo site-header__logo--minimal"
-          />
         </Link>
 
         <nav className="site-header__desktop-nav" aria-label="Navegação principal">
           <ul>
             {navigation.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} aria-current={pathname === item.href ? "page" : undefined}>
+                <NavigationLink
+                  href={item.href}
+                  className={item.label === "Contato" ? "site-header__contact-link" : undefined}
+                  aria-current={isHome && activeSection === item.href.slice(1) ? "location" : undefined}
+                >
                   {item.label}
-                </Link>
+                </NavigationLink>
               </li>
             ))}
           </ul>
@@ -77,29 +95,6 @@ function Header() {
             <span aria-hidden="true" />
             <span aria-hidden="true" />
           </button>
-
-          <a href={isHome ? "#contato" : "/#contato"} className="site-header__cta" onClick={() => setIsMenuOpen(false)}>
-            <span className="site-header__cta-label">Vamos conversar</span>
-            <span className="site-header__cta-label-short">Contato</span>
-            <span className="site-header__cta-arrow" aria-hidden="true">
-              <Image
-                src="/brand/cta-arrow-white.svg"
-                alt=""
-                width={9}
-                height={9}
-                unoptimized
-                className="site-header__cta-arrow-icon site-header__cta-arrow-icon--default"
-              />
-              <Image
-                src="/brand/cta-arrow-grafite.svg"
-                alt=""
-                width={9}
-                height={9}
-                unoptimized
-                className="site-header__cta-arrow-icon site-header__cta-arrow-icon--hover"
-              />
-            </span>
-          </a>
         </div>
       </div>
 
@@ -112,20 +107,16 @@ function Header() {
         <ul>
           {navigation.map((item) => (
             <li key={item.href}>
-              <Link
+              <NavigationLink
                 href={item.href}
-                aria-current={pathname === item.href ? "page" : undefined}
+                className={item.label === "Contato" ? "site-header__contact-link" : undefined}
+                aria-current={isHome && activeSection === item.href.slice(1) ? "location" : undefined}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
-              </Link>
+              </NavigationLink>
             </li>
           ))}
-          <li>
-            <a href={siteConfig.curriculumUrl} target="_blank" rel="noreferrer">
-              Currículo
-            </a>
-          </li>
         </ul>
       </nav>
     </header>
