@@ -4,6 +4,7 @@ import Image from "next/image"
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { createHeroPhotoTimeline } from "@/lib/home-hero-motion"
+import { watchHeroImages } from "@/lib/home-hero-image-readiness"
 
 import styles from "./home-hero-gallery.module.css"
 
@@ -30,10 +31,7 @@ export function HomeHeroGallery() {
     media.add(
       { motion: "(prefers-reduced-motion: no-preference)", reduced: "(prefers-reduced-motion: reduce)" },
       (context) => {
-        if (context.conditions?.reduced) {
-          root.dataset.animationState = "static"
-          return
-        }
+        const reducedMotion = Boolean(context.conditions?.reduced)
 
         const layers = Array.from(root.querySelectorAll<HTMLElement>("[data-hero-photo]"))
         const images = Array.from(root.querySelectorAll<HTMLImageElement>("img"))
@@ -42,7 +40,7 @@ export function HomeHeroGallery() {
         let outerRotation: gsap.core.Tween | undefined
         let inView = false
         let ready = false
-        let disposed = false
+        let availableCount = 0
 
         const updatePlayback = () => {
           const play = ready && inView && !document.hidden
@@ -58,21 +56,21 @@ export function HomeHeroGallery() {
         observer.observe(root)
         document.addEventListener("visibilitychange", updatePlayback)
 
-        // Start with the images available now; a single slow decode must not hold up the whole hero.
-        const decodeAll = Promise.all(images.map((image) => image.decode().catch(() => undefined)))
-        const readinessTimeout = new Promise<void>((resolve) => window.setTimeout(resolve, 1200))
-        Promise.race([decodeAll, readinessTimeout])
-          .then(() => {
-            if (disposed) return
-            const availableLayers = layers.filter((layer) => layer.querySelector("img")!.naturalWidth > 0)
-            if (availableLayers.length === 0) {
-              observer.disconnect()
-              document.removeEventListener("visibilitychange", updatePlayback)
-              root.dataset.animationState = "static"
-              return
-            }
+        const stopWatching = watchHeroImages(images, (availableIndices) => {
+          if (availableIndices.length === 0 || availableIndices.length === availableCount) return
+          availableCount = availableIndices.length
+          const availableLayers = availableIndices.map((index) => layers[index])
 
-            photos = createHeroPhotoTimeline(availableLayers)
+          photos?.kill()
+          gsap.set(layers, { opacity: 0, scale: 1 })
+          if (availableLayers.length === 1) {
+            gsap.set(availableLayers[0], { opacity: 1 })
+            photos = undefined
+          } else {
+            photos = createHeroPhotoTimeline(availableLayers, { reducedMotion })
+          }
+
+          if (!rotation) {
             rotation = gsap.to(orbit, {
               svgOrigin: "296.91 280",
               rotation: 360,
@@ -81,6 +79,8 @@ export function HomeHeroGallery() {
               ease: "none",
               paused: true,
             })
+          }
+          if (!outerRotation) {
             outerRotation = gsap.to(outerOrbit, {
               svgOrigin: "296.91 280",
               rotation: -360,
@@ -89,12 +89,13 @@ export function HomeHeroGallery() {
               ease: "none",
               paused: true,
             })
-            ready = true
-            updatePlayback()
-          })
+          }
+          ready = true
+          updatePlayback()
+        })
 
         return () => {
-          disposed = true
+          stopWatching()
           photos?.kill()
           rotation?.kill()
           outerRotation?.kill()

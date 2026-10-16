@@ -25,3 +25,34 @@ test("cycles through four photos without an empty frame at the loop boundary", a
     timeline.kill()
   }
 })
+
+test("cycles loaded photos without blank frames when only two are ready", async () => {
+  const { createHeroPhotoTimeline } = await import("../lib/home-hero-motion.ts")
+  const photos = Array.from({ length: 2 }, () => ({ opacity: 0, scale: 1 }))
+  const timeline = createHeroPhotoTimeline(photos)
+
+  try {
+    for (const [time, visible] of [[0.4, 0], [2.9, 1], [5.4, 0], [7.9, 1]]) {
+      timeline.totalTime(time)
+      assert.ok(photos[visible].opacity > 0.99, `Photo ${visible} must be visible at ${time}s`)
+    }
+  } finally {
+    timeline.kill()
+  }
+})
+
+test("reduced motion changes photos without zooming them", async () => {
+  const { createHeroPhotoTimeline } = await import("../lib/home-hero-motion.ts")
+  const photos = Array.from({ length: 4 }, () => ({ opacity: 0, scale: 1 }))
+  const timeline = createHeroPhotoTimeline(photos, { reducedMotion: true })
+
+  try {
+    timeline.totalTime(1.5)
+    assert.equal(photos[0].scale, 1)
+    timeline.totalTime(2.9)
+    assert.ok(photos[1].opacity > 0.99)
+    assert.equal(photos[1].scale, 1)
+  } finally {
+    timeline.kill()
+  }
+})
