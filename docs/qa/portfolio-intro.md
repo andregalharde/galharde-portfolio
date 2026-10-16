@@ -1,5 +1,11 @@
 # Intro do portfólio — validação
 
+## Atualização de 16 de outubro de 2026
+
+A intro foi reativada com a primeira foto da hero (`public/slider-01.JPEG`). O círculo passou de 336 para 403,2 unidades de diâmetro (20% maior); o enquadramento mantém André visível. As regras globais de cobertura inicial foram movidas para `app/globals.css` para compilar no Next.js atual.
+
+Prévia conferida no Chrome em 1440 × 900 e 390 × 844, com movimento permitido: o diálogo abriu, a foto apareceu e o botão de pular permaneceu visível. O comportamento de pular a intro quando o sistema solicita movimento reduzido continua ativo. Os registros abaixo documentam versões anteriores.
+
 Data: 11 de setembro de 2026.
 
 ## Atualização do ritmo para 3,6 segundos

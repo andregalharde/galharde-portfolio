@@ -1,7 +1,6 @@
 import Image from "next/image"
 
 import { siteConfig } from "@/lib/site-config"
-import { FooterIllustration } from "@/components/footer-illustration"
 
 function Footer() {
   return (
@@ -56,10 +55,6 @@ function Footer() {
             <span>Voltar ao topo</span>
             <span className="site-footer__back-to-top-arrow" aria-hidden="true" />
           </a>
-        </div>
-
-        <div className="site-footer__artwork">
-          <FooterIllustration />
         </div>
       </div>
     </footer>

@@ -8,6 +8,7 @@ import { introDot, introLetters, introSymbol } from "@/lib/portfolio-intro-vecto
 import styles from "./portfolio-intro.module.css"
 
 const DURATION = 3600
+const introPhoto = "/slider-01.JPEG"
 
 export function PortfolioIntro() {
   const pathname = usePathname()
@@ -53,7 +54,7 @@ export function PortfolioIntro() {
     // SVG image errors can happen before hydration and are not replayed by React.
     const portrait = new window.Image()
     portrait.addEventListener("error", finish)
-    portrait.src = "/media/hero/andre-portrait.png"
+    portrait.src = introPhoto
     const onMotionChange = () => { if (motion.matches) finish() }
     motion.addEventListener("change", onMotionChange)
     return () => {
@@ -82,7 +83,7 @@ export function PortfolioIntro() {
       <svg className={styles.scene} viewBox="0 0 600 420" fill="none" aria-hidden="true">
         <defs>
           <clipPath id="intro-portrait-clip">
-            <circle className={styles.clip} cx="300" cy="210" r="168" />
+            <circle className={styles.clip} cx="300" cy="210" r="201.6" />
           </clipPath>
         </defs>
         <g className={styles.dot}>
@@ -93,9 +94,9 @@ export function PortfolioIntro() {
         <g clipPath="url(#intro-portrait-clip)">
           <image
             className={styles.portrait}
-            href="/media/hero/andre-portrait.png"
-            x="132" y="42" width="336" height="336"
-            preserveAspectRatio="xMidYMid slice"
+            href={introPhoto}
+            x="98.4" y="8.4" width="403.2" height="403.2"
+            preserveAspectRatio="xMinYMid slice"
             onError={finish}
           />
         </g>
