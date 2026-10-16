@@ -1405,8 +1405,6 @@ a:focus-visible > .portfolio-cta__arrow { background: transparent; color: var(--
     justify-content: center;
     width: 12px;
     height: 12px;
-    overflow: hidden;
-    border-radius: 50%;
     background: transparent;
     color: var(--color-action);
     transition: background-color var(--motion-fast) var(--ease-standard);
