@@ -35,7 +35,8 @@ function Header() {
         const activationLine = Math.max(headerBottom, scrollPadding + scrollMargin) + 2
         return section.getBoundingClientRect().top <= activationLine
       })
-      setActiveSection(reached.at(-1)?.id ?? null)
+      const atPageEnd = window.scrollY > 0 && window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2
+      setActiveSection(atPageEnd ? "contato" : reached.at(-1)?.id ?? null)
     }
     const scheduleUpdate = () => {
       if (!frame) frame = window.requestAnimationFrame(update)

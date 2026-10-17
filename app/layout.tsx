@@ -15,6 +15,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://galharde-portfolio.vercel.app"),
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
@@ -31,11 +32,13 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: siteConfig.name,
     description: siteConfig.description,
+    images: [{ url: "/brand/share-icon.png", width: 512, height: 512, alt: "Símbolo de André Galharde" }],
   },
   twitter: {
     card: "summary",
     title: siteConfig.name,
     description: siteConfig.description,
+    images: ["/brand/share-icon.png"],
   },
   icons: {
     icon: [
